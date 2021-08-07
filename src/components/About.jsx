@@ -36,7 +36,7 @@ export default function About() {
 
             <style jsx>{`
                 .about {
-                    margin-top: 300px;
+                    margin-top: 600px;
                 }
 
                 h1 {

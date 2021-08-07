@@ -31,3 +31,7 @@ yarn-error.log*
 
 # vscode
 /.vscode
+
+# CSS
+*.css
+*.css.map

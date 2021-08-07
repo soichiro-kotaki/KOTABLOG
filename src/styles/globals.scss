@@ -1,0 +1,22 @@
+@import "common.scss";
+@import "reset.scss";
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Lato", "Noto Sans JP", "ヒラギノ角ゴ ProN",
+        "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+        "MS PGothic", sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #f4f5f7;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
