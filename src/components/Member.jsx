@@ -1,51 +1,41 @@
 export default function Member() {
     return (
-        <div id="member">
+        <div className="member" id="member">
             <h1>
                 Member<span>教員と学生</span>
             </h1>
-            <h2>
-                当グローバル教養ゼミでは、萱津理佳准教授ご指導のもと、６名が活動しています。
-            </h2>
-            <p>
-                出身地も違えば、専攻も違う、さまざまなバックグラウンドを持つメンバーが集まり、日々活動しています。
-            </p>
-            <section className="professor">
-                <img src="/professor.jpg" className="professor-img" />
-                <div className="professor-description">
-                    <p className="professor-belongs">
-                        長野県立大学 グローバルマネジメント学科 准教授
+            <section className="member-about">
+                <img src="/member.png" className="member-img" />
+                <div className="description">
+                    <p>
+                        当グローバル教養ゼミでは、萱津理佳准教授ご指導のもと、６名が活動しています。
                     </p>
-                    <h3 className="professor-name">萱津 理佳</h3>
-                    <span className="professor-name-reading">かやつ りか</span>
-                    <p className="professor-major">
-                        専門分野： 教育工学・情報学フロンティア
+                    <p>
+                        出身地も違えば、専攻も違う、さまざまなバックグラウンドを持つメンバーが集まり、日々活動しています。
                     </p>
-                    <p className="professor-hobby">
-                        趣味： ツーリング・スポーツ
-                    </p>
-                    <div className="professor-link">
-                        <a className="professor-btn">MORE</a>
+                    <div className="link">
+                        <a className="btn">MORE</a>
                     </div>
                 </div>
             </section>
 
             <style jsx>{`
-                h1 {
-                    font-size: 64px;
-                    margin: 10px auto 40px;
-                    text-align: center;
-                    color: #f1c40f;
+                .member {
+                    background: #f4f5f7;
+                    margin-top: 80px;
                 }
 
-                h2 {
-                    font-size: 32px;
+                h1 {
+                    font-size: 64px;
+                    margin: 0 auto 30px;
                     text-align: center;
+                    color: #b99b00;
+                    filter: brightness(115%);
                 }
 
                 p {
                     font-size: 24px;
-                    text-align: center;
+                    margin: 20px auto 20px;
                 }
 
                 span {
@@ -53,67 +43,35 @@ export default function Member() {
                     padding-left: 3rem;
                 }
 
-                .professor {
+                .member-about {
                     display: flex;
-                    position: relative;
-                    width: 80%;
+                    width: 90%;
                     margin: 40px auto 0;
                     color: #333;
                 }
 
-                .professor-img {
-                    position: relative;
-                    z-index: 2;
+                .member-img {
                     display: block;
-                    width: 400px;
+                    width: 500px;
                     pointer-events: none;
+                    border-radius: 10px;
+                    padding-bottom: 30px;
                 }
 
-                .professor-description {
-                    position: absolute;
-                    top: 80px;
-                    left: 320px;
-                    max-width: 700px;
-                    width: 70%;
+                .description {
+                    flex: 1;
                     height: 400px;
                     background: #f4f5f7;
                     padding-left: 100px;
                 }
 
-                .professor-belongs {
-                    font-size: 16px;
-                    text-align: left;
-                    // margin-left: 100px;
-                }
-
-                .professor-name {
-                    text-align: left;
-                    font-size: 32px;
-                    margin-top: 0;
-                    margin-bottom: 0;
-                }
-
-                .professor-name-reading {
-                    font-size: 16px;
-                    padding-left: 16px;
-                }
-
-                .professor-major {
-                    text-align: left;
-                    font-size: 24px;
-                }
-
-                .professor-hobby {
-                    text-align: left;
-                    font-size: 24px;
-                }
-
-                .professor-link {
+                .link {
                     height: 98px;
                     text-align: center;
+                    margin-top: 80px;
                 }
 
-                .professor-btn {
+                .btn {
                     display: inline-block;
                     color: #fff;
                     margin-top: 25px;
@@ -122,37 +80,31 @@ export default function Member() {
                     border-radius: 5px;
                 }
 
-                .professor-btn:hover {
+                .btn:hover {
                     background: #fff;
                     border: 1px solid #1d2f5f;
                     color: #1d2f5f;
                 }
 
                 @media (max-width: 480px) {
+                    .member {
+                        margin-top: 40px;
+                    }
+
                     p {
                         font-size: 16px;
                     }
-                    .professor {
+                    .member-about {
                         flex-direction: column;
                         width: 90%;
                     }
 
-                    .professor-description {
-                        position: relative;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 300px;
+                    .description {
+                        padding-left: 0;
                     }
-                }
 
-                @media (max-width: 480px) {
                     h1 {
                         font-size: 32px;
-                    }
-
-                    h2 {
-                        font-size: 16px;
                     }
 
                     span {
@@ -160,27 +112,19 @@ export default function Member() {
                         padding-left: 1em;
                     }
 
-                    .professor-img {
+                    .member-img {
                         width: 100%;
                     }
 
-                    .professor-description {
-                        padding-left: 0.5em;
+                    .description {
+                        padding-left: 0;
                     }
 
-                    .professor-major {
-                        font-size: 0.8em;
-                        margin: 0;
-                    }
-                    .professor-hobby {
-                        font-size: 0.8em;
-                        margin: 0;
+                    .link {
+                        margin-top: 10px;
                     }
 
-                    .professor-link {
-                    }
-
-                    .professor-btn {
+                    .btn {
                         display: inline-block;
                         color: #fff;
                         margin-top: 10%;

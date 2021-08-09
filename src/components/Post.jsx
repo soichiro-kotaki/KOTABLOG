@@ -33,22 +33,20 @@ export default function Post() {
 
             <style jsx>{`
                 .post {
-                    position: absolute;
-                    top: 15%;
-                    left: 10%;
-                    z-index: 2;
                     text-align: center;
-                    width: 80%;
+                    width: 90%;
                     background: #f4f5f7;
                     height: 600px;
-                    margin: 80px auto 80px;
+                    margin: 80px auto 0;
                     color: #333;
                 }
 
                 h1 {
                     font-size: 64px;
                     text-align: center;
-                    color: #f1c40f;
+                    color: #b99b00;
+                    filter: brightness(115%);
+                    margin-bottom: 30px;
                 }
 
                 span {
@@ -73,7 +71,6 @@ export default function Post() {
                 }
 
                 .post-title {
-                    color: #333;
                     text-decoration: none;
                 }
 
@@ -109,6 +106,7 @@ export default function Post() {
                     .post-item {
                         flex-direction: column;
                         text-align: left;
+                        padding-bottom: 10px;
                     }
 
                     .post-time-stamp {

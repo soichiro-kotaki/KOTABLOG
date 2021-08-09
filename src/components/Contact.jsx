@@ -4,22 +4,43 @@ export default function Contact() {
             <h1 id="contact">
                 Contact<span>お問い合わせ</span>
             </h1>
-            <p>所在地： 長野県長野市三輪107研究室</p>
-            <p>メールアドレス： rika.kayatsu@19G054.u-nagano.ac.jp</p>
-            <p>電話番号： 070-8518-5090</p>
+            <div className="divider">
+                <div className="seminar_info">
+                    <p>所在地： 長野県長野市三輪107研究室</p>
+                    <p>メールアドレス： rika.kayatsu@19G054.u-nagano.ac.jp</p>
+                    <p>電話番号： 070-8518-5090</p>
+                </div>
+                <div className="link">
+                    <a className="btn">お問い合わせフォームへ</a>
+                </div>
+            </div>
 
             <style jsx>{`
+                .contact {
+                    background: #f4f5f7;
+                    color: #333;
+                    width: 100%;
+                    margin: 80px auto 0;
+                }
+
+                .divider {
+                    display: flex;
+                    width: 90%;
+                    margin: 0 auto;
+                }
+
                 h1 {
                     font-size: 64px;
-                    margin: 100px auto 40px;
+                    margin: 0 auto 30px;
                     text-align: center;
-                    color: #f1c40f;
+                    color: #b99b00;
+                    filter: brightness(115%);
                 }
 
                 p {
                     font-size: 24px;
-                    text-align: center;
-                    // font-weight: bold;
+                    margin-bottom: 20px;
+                    text-align: left;
                 }
 
                 span {
@@ -27,7 +48,35 @@ export default function Contact() {
                     padding-left: 3rem;
                 }
 
+                .link {
+                    height: 98px;
+                    text-align: center;
+                    margin: 80px auto 40px;
+                }
+
+                .btn {
+                    display: block;
+                    color: #fff;
+                    margin-top: 25px;
+                    background: #1d2f5f;
+                    padding: 10px 30px;
+                    border-radius: 5px;
+                }
+
+                .btn:hover {
+                    background: #fff;
+                    border: 1px solid #1d2f5f;
+                    color: #1d2f5f;
+                }
+
                 @media (max-width: 480px) {
+                    .contact {
+                        margin-top: 40px;
+                    }
+
+                    .divider {
+                        flex-direction: column;
+                    }
                     h1 {
                         font-size: 32px;
                     }
@@ -39,6 +88,9 @@ export default function Contact() {
                     span {
                         font-size: 0.5em;
                         padding-left: 1em;
+                    }
+                    .link {
+                        margin-top: 30px;
                     }
                 }
 
