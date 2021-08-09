@@ -112,12 +112,12 @@ export default function Post() {
                     .post-time-stamp {
                         padding-left: 10px;
                         padding-right: 30px;
-                        font-size: 8px;
+                        font-size: 0.6em;
                         display: block;
                     }
 
                     .post-title {
-                        font-size: 8px;
+                        font-size: 0.7em;
                     }
                 }
 

@@ -6,9 +6,12 @@ export default function Contact() {
             </h1>
             <div className="divider">
                 <div className="seminar_info">
-                    <p>所在地： 長野県長野市三輪107研究室</p>
-                    <p>メールアドレス： rika.kayatsu@19G054.u-nagano.ac.jp</p>
-                    <p>電話番号： 070-8518-5090</p>
+                    <p>所在地：</p>
+                    <p>長野県長野市三輪107研究室</p>
+                    <p>メールアドレス：</p>
+                    <p>rika.kayatsu@19G054.u-nagano.ac.jp</p>
+                    <p>電話番号：</p>
+                    <p>070-8518-5090</p>
                 </div>
                 <div className="link">
                     <a className="btn">お問い合わせフォームへ</a>
@@ -39,8 +42,11 @@ export default function Contact() {
 
                 p {
                     font-size: 24px;
-                    margin-bottom: 20px;
                     text-align: left;
+                }
+
+                p:nth-child(even) {
+                    margin-bottom: 20px;
                 }
 
                 span {
@@ -77,6 +83,7 @@ export default function Contact() {
                     .divider {
                         flex-direction: column;
                     }
+
                     h1 {
                         font-size: 32px;
                     }
@@ -89,8 +96,10 @@ export default function Contact() {
                         font-size: 0.5em;
                         padding-left: 1em;
                     }
+
                     .link {
-                        margin-top: 30px;
+                        margin-top: 0px;
+                        margin-bottom: 30px;
                     }
                 }
 
