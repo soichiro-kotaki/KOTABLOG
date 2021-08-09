@@ -75,6 +75,8 @@ export default function Home() {
 
                     .description {
                         font-size: 1rem;
+                        top: 15%;
+                        width: 250px;
                     }
                 }
             `}</style>

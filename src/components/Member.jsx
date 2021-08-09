@@ -53,16 +53,15 @@ export default function Member() {
                 .member-img {
                     display: block;
                     width: 500px;
-                    pointer-events: none;
-                    border-radius: 10px;
-                    padding-bottom: 30px;
+                    margin-bottom: 30px;
+                    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
                 }
 
                 .description {
                     flex: 1;
                     height: 400px;
                     background: #f4f5f7;
-                    padding-left: 100px;
+                    margin-left: 100px;
                 }
 
                 .link {
@@ -99,10 +98,6 @@ export default function Member() {
                         width: 90%;
                     }
 
-                    .description {
-                        padding-left: 0;
-                    }
-
                     h1 {
                         font-size: 32px;
                     }
@@ -114,10 +109,12 @@ export default function Member() {
 
                     .member-img {
                         width: 100%;
+                        border-radius: 10px;
+                        margin-bottom: 0px;
                     }
 
                     .description {
-                        padding-left: 0;
+                        margin-left: 0;
                     }
 
                     .link {
