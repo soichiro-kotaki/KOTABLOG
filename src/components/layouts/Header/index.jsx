@@ -14,13 +14,7 @@ import { Presenter } from "./Presenter";
  * @returns
  */
 export const Header = (props) => {
-    const { handleOpenSearchModal, handleOpenMenuModal } = props;
+    const { handleOpenMenuModal } = props;
 
-    return (
-        <Presenter
-        // pathName={router.pathname}
-        // handleOpenSearchModal={handleOpenSearchModal}
-        // handleOpenMenuModal={handleOpenMenuModal}
-        />
-    );
+    return <Presenter handleOpenMenuModal={handleOpenMenuModal} />;
 };

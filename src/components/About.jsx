@@ -7,27 +7,28 @@ export default function About() {
             {/* <h2>
                 当ゼミでは、<b>「情報」</b>をテーマに研究を進めています。
             </h2> */}
-            <p className="about-keyword-title">キーワード</p>
+            {/* <p className="about-keyword-title">キーワード</p>
             <p className="about-keyword-words">
                 #ICT #ブロックチェーン #情報教育 #プログラミング #まなびここち
                 #IT×農業 #Maas
-            </p>
+            </p> */}
             <div className="contents">
                 <section className="card">
-                    <img src="/blockchain.jpg" className="card-img" />
+                    <img src="/blockchain.png" className="card-img" />
                     <h2 className="card-title">ブロックチェーン × ○○</h2>
-                    <p className="card-text">こんにちはこんにちは</p>
+                    <p className="card-text">
+                        ブロックチェーン技術と、既存のテクノロジーを生かして、どのような事が実現できるのか、仮説をを通して検証いています。
+                    </p>
                     <div className="card-link">
                         <a className="card-btn">MORE</a>
                     </div>
                 </section>
                 <section className="card">
-                    <img
-                        src="/information-and-education.jpg"
-                        className="card-img"
-                    />
+                    <img src="/edu-and-info.png" className="card-img" />
                     <h2 className="card-title">情報と教育</h2>
-                    <p className="card-text">こんにちはこんにちは</p>
+                    <p className="card-text">
+                        教育環境に情報技術を掛け合わせ、より学びが楽しくなるような環境について研究しています。
+                    </p>
                     <div className="card-link">
                         <a className="card-btn">MORE</a>
                     </div>
@@ -36,14 +37,17 @@ export default function About() {
 
             <style jsx>{`
                 .about {
-                    margin-top: 600px;
+                    margin: 80px auto 0;
+                    background: #f4f5f7;
+                    width: 100%;
                 }
 
                 h1 {
                     font-size: 64px;
-                    margin: 0 auto;
+                    margin: 0 auto 30px;
                     text-align: center;
-                    color: #f1c40f;
+                    color: #b99b00;
+                    filter: brightness(115%);
                 }
 
                 h2 {
@@ -75,10 +79,11 @@ export default function About() {
                 .card {
                     width: 400px;
                     height: 500px;
-                    background: #f4f5f7;
+                    background: #fff;
                     color: #333;
                     text-align: center;
                     margin: 30px;
+                    margin-bottom: 50px;
                     border-radius: 10px;
                 }
 
@@ -89,15 +94,20 @@ export default function About() {
                 }
 
                 .card-title {
+                    margin-top: 0.3em;
+                    margin-bottom: 0.3em;
                     font-size: 32px;
                 }
 
                 .card-text {
                     font-size: 16px;
+                    text-align: left;
+                    height: 80px;
+                    padding-left: 0.5em;
                 }
 
                 .card-link {
-                    border-top: 1px solid #afa7a4;
+                    border-top: 1px solid #dddcda;
                     height: 98px;
                 }
 
@@ -140,8 +150,8 @@ export default function About() {
                     }
 
                     .card {
-                        width: 80%;
-                        height: 80%;
+                        width: 85%;
+                        height: 50%;
                         margin: 0 auto 30px;
                     }
 

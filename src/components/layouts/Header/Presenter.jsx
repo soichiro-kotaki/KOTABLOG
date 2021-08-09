@@ -2,7 +2,6 @@
  * layouts/Header
  * PresentationalComponent
  */
-import React from "react";
 import Link from "next/link";
 import { Link as Scroll } from "react-scroll";
 
@@ -12,6 +11,7 @@ import { Link as Scroll } from "react-scroll";
 import styles from "./styles.module.scss";
 
 export const Presenter = (props) => {
+    const { handleOpenMenuModal } = props;
     return (
         <header className={styles.menu}>
             <img src="/seminar-logo.png" className={styles.logo} />
@@ -58,7 +58,7 @@ export const Presenter = (props) => {
                 </li>
             </ul>
             {/*  */}
-            <div className={styles.menubar} onClick={props.handleOpenMenuModal}>
+            <div className={styles.menubar} onClick={handleOpenMenuModal}>
                 <img src="/menu.png" />
             </div>
         </header>

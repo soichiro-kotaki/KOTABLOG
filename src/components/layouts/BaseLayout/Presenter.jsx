@@ -7,7 +7,7 @@ import React from "react";
 import { MetaHead } from "../MetaHead";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
-// import { MenuModal } from "@/components/modals/MenuModal";
+import { MenuModal } from "../../modals/MenuModal";
 /* styles */
 import styles from "./styles.module.scss";
 
@@ -15,12 +15,23 @@ import styles from "./styles.module.scss";
  * presenter
  */
 export const Presenter = (props) => {
+    const {
+        handleOpenMenuModal,
+        children,
+        isMenuModalVisible,
+        handleCloseMenuModal,
+    } = props;
+
     return (
         <div className={styles.container} id="top">
             <MetaHead />
-            <Header />
-            {props.children}
+            <Header handleOpenMenuModal={handleOpenMenuModal} />
+            {children}
             <Footer />
+            <MenuModal
+                isMenuModalVisible={isMenuModalVisible}
+                handleCloseMenuModal={handleCloseMenuModal}
+            />
         </div>
     );
 };

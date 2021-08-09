@@ -11,7 +11,9 @@ export default function Home() {
             <main>
                 <div className="top">
                     <div className="top-image"></div>
-                    <h2 className="description">IT × 教育</h2>
+                    <h2 className="description">
+                        「IT」を活用した新たな価値創造について研究しています
+                    </h2>
                 </div>
                 <ToTopButton />
 
@@ -43,7 +45,7 @@ export default function Home() {
                 .top-image {
                     max-width: 100%;
                     width: 100%;
-                    height: 500px;
+                    height: 700px;
                     filter: brightness(50%);
                     background-image: url("/top1.jpg");
                     background-repeat: no-repeat;
@@ -57,8 +59,8 @@ export default function Home() {
                     left: 50%;
                     transform: translate(-50%);
                     z-index: 2;
-                    font-size: 5rem;
-                    color: #f4f5f7;
+                    font-size: 3rem;
+                    color: #dddcda;
                 }
 
                 // レスポンシブ
@@ -72,7 +74,7 @@ export default function Home() {
                     }
 
                     .description {
-                        font-size: 2rem;
+                        font-size: 1rem;
                     }
                 }
             `}</style>

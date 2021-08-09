@@ -13,8 +13,7 @@ export const Presenter = () => {
     return (
         <footer className={styles.footer}>
             <p className={styles.copy}>
-                Copyright© 2021 The University of Nagano. Kayatsu Seminar. All
-                Rights Reserved.
+                Copyright© 2021 The University of Nagano. Kayatsu Seminar.
             </p>
         </footer>
     );
