@@ -16,7 +16,7 @@ export const Presenter = (props) => {
         <header className={styles.menu}>
             <img src="/seminar-logo.png" className={styles.logo} />
             <h1 className={styles.seminar}>
-                長野県立大学 グローバル教養 萱津ゼミ{" "}
+                長野県立大学 グローバル教養 萱津ゼミ
             </h1>
             <ul className={styles.nav}>
                 <li className={styles.link}>
