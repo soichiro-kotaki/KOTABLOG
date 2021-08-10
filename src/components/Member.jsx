@@ -14,7 +14,7 @@ export default function Member() {
                         出身地も違えば、専攻も違う、さまざまなバックグラウンドを持つメンバーが集まり、日々活動しています。
                     </p>
                     <div className="link">
-                        <a className="btn">MORE</a>
+                        <div className="btn">MORE</div>
                     </div>
                 </div>
             </section>
@@ -40,7 +40,19 @@ export default function Member() {
 
                 span {
                     font-size: 24px;
-                    padding-left: 3rem;
+                    padding-left: 1rem;
+                }
+
+                span::before {
+                    content: "";
+                    border-right: 1px solid #b99b00;
+                    margin-right: 0.2em;
+                }
+
+                span::after {
+                    content: "";
+                    border-right: 1px solid #b99b00;
+                    margin-left: 0.2em;
                 }
 
                 .member-about {
@@ -71,19 +83,37 @@ export default function Member() {
                 }
 
                 .btn {
-                    display: inline-block;
+                    display: flex;
                     color: #fff;
-                    margin-top: 25px;
+                    margin: 25px auto 0;
                     background: #1d2f5f;
                     padding: 10px 30px;
                     border-radius: 100vh;
                     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+                    align-items: center;
+                    width: 140px;
                 }
 
                 .btn:hover {
                     background: #fff;
                     border: 1px solid #1d2f5f;
                     color: #1d2f5f;
+                    cursor: pointer;
+                }
+
+                .btn::after {
+                    content: "";
+                    width: 9px;
+                    height: 9px;
+                    border-top: 3px solid #f4f5f7;
+                    border-right: 3px solid #f4f5f7;
+                    transform: rotate(45deg);
+                    margin-left: 0.7em;
+                }
+
+                .btn:hover::after {
+                    border-top: 3px solid #1d2f5f;
+                    border-right: 3px solid #1d2f5f;
                 }
 
                 @media (max-width: 480px) {
@@ -106,7 +136,7 @@ export default function Member() {
 
                     span {
                         font-size: 0.5em;
-                        padding-left: 1em;
+                        padding-left: 0.7em;
                     }
 
                     .member-img {
@@ -124,9 +154,8 @@ export default function Member() {
                     }
 
                     .btn {
-                        display: inline-block;
                         color: #fff;
-                        margin-top: 10%;
+                        margin: 10% auto 0;
                         background: #1d2f5f;
                         padding: 10px 30px;
                     }
