@@ -4,7 +4,8 @@ export default function Post() {
     return (
         <div className="post" id="news">
             <h1>
-                News<span>新着情報</span>
+                News
+                <span>新着情報</span>
             </h1>
             <ul className="post-list">
                 <li className="post-item">
@@ -52,7 +53,20 @@ export default function Post() {
 
                 span {
                     font-size: 24px;
-                    padding-left: 3rem;
+                    padding-left: 1rem;
+                    margin-bottom: 30px;
+                }
+
+                span::before {
+                    content: "";
+                    border-right: 1px solid #b99b00;
+                    margin-right: 0.2em;
+                }
+
+                span::after {
+                    content: "";
+                    border-right: 1px solid #b99b00;
+                    margin-left: 0.2em;
                 }
 
                 .post-item {
@@ -98,7 +112,7 @@ export default function Post() {
 
                     span {
                         font-size: 0.5em;
-                        padding-left: 1em;
+                        padding-left: 0.7em;
                     }
 
                     .post-list {
