@@ -66,7 +66,8 @@ export default function Contact() {
                     margin-top: 25px;
                     background: #1d2f5f;
                     padding: 10px 30px;
-                    border-radius: 5px;
+                    border-radius: 100vh;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
                 }
 
                 .btn:hover {
@@ -86,6 +87,7 @@ export default function Contact() {
 
                     h1 {
                         font-size: 32px;
+                        font-weight: bold;
                     }
 
                     p {

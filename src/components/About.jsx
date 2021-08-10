@@ -120,7 +120,8 @@ export default function About() {
                     text-align: center;
                     background: #1d2f5f;
                     padding: 10px 30px;
-                    border-radius: 5px;
+                    border-radius: 100vh;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
                 }
 
                 .card-btn:hover {
@@ -135,6 +136,7 @@ export default function About() {
                     }
                     h1 {
                         font-size: 32px;
+                        font-weight: bold;
                     }
 
                     span {
@@ -155,8 +157,6 @@ export default function About() {
                         width: 85%;
                         height: 50%;
                         margin: 0 auto 30px;
-                        box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1),
-                            0 3px 6px rgba(0, 0, 0, 0.08);
                     }
 
                     .card-img {

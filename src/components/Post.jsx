@@ -39,6 +39,7 @@ export default function Post() {
                     height: 600px;
                     margin: 80px auto 0;
                     color: #333;
+                    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
                 }
 
                 h1 {
@@ -92,6 +93,7 @@ export default function Post() {
 
                     h1 {
                         font-size: 32px;
+                        font-weight: bold;
                     }
 
                     span {
