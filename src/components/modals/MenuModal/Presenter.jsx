@@ -35,7 +35,7 @@ export const Presenter = (props) => {
                         duration={600}
                         smooth={true}
                     >
-                        <span className={styles.subtitle}>News</span>新着情報
+                        <span className={styles.subtitle}>News</span>
                     </Scroll>
                 </li>
                 <li className={styles.link}>
@@ -45,7 +45,7 @@ export const Presenter = (props) => {
                         duration={600}
                         smooth={true}
                     >
-                        <span className={styles.subtitle}>About</span>研究紹介
+                        <span className={styles.subtitle}>About</span>
                     </Scroll>
                 </li>
                 <li className={styles.link}>
@@ -56,15 +56,16 @@ export const Presenter = (props) => {
                         smooth={true}
                     >
                         <span className={styles.subtitle}>Member</span>
-                        教員と学生
                     </Scroll>
                 </li>
                 <li className={styles.link}>
                     <Scroll to="contact" duration={600} smooth={true}>
                         <span className={styles.subtitle}>Contact</span>
-                        お問い合わせ
                     </Scroll>
                 </li>
+                <p className={styles.close} onClick={handleCloseMenuModal}>
+                    Close
+                </p>
             </ul>
         </Modal>
     );
