@@ -17,7 +17,7 @@ export default function About() {
                     <img src="/blockchain.png" className="card-img" />
                     <h2 className="card-title">ブロックチェーン × ○○</h2>
                     <p className="card-text">
-                        ブロックチェーン技術と、既存のテクノロジーを生かして、どのような事が実現できるのか、仮説を通して検証いています。
+                        ブロックチェーン技術と、既存のテクノロジーを生かして、どのような事が実現できるのか、仮説を通して検証しています。
                     </p>
                     <div className="card-link">
                         <div className="card-btn">MORE</div>
@@ -48,16 +48,6 @@ export default function About() {
                     text-align: center;
                     color: #b99b00;
                     filter: brightness(115%);
-                }
-
-                h2 {
-                    font-size: 32px;
-                    text-align: center;
-                }
-
-                p {
-                    font-size: 24px;
-                    text-align: center;
                 }
 
                 span {
@@ -117,7 +107,8 @@ export default function About() {
                     font-size: 16px;
                     text-align: left;
                     height: 80px;
-                    padding-left: 0.5em;
+                    width: 90%;
+                    margin: 0 auto;
                 }
 
                 .card-link {
