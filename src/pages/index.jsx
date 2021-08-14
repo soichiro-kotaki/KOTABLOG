@@ -2,7 +2,7 @@ import Post from "../components/Post";
 import About from "../components/About";
 import Member from "../components/Member";
 import Contact from "../components/Contact";
-import { ToTopButton } from "../components/commons/ToTopButton";
+import { ToTopButton } from "../components/commons/atoms/ToTopButton";
 import { BaseLayout } from "../components/layouts/BaseLayout";
 
 export default function Home() {

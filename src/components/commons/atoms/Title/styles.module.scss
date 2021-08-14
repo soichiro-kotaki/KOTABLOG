@@ -1,0 +1,36 @@
+.title {
+    font-size: 64px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #b99b00;
+    filter: brightness(115%);
+}
+
+.subtitle {
+    font-size: 24px;
+    padding-left: 1rem;
+}
+
+.subtitle::before {
+    content: "";
+    border-right: 1px solid #b99b00;
+    margin-right: 0.2em;
+}
+
+.subtitle::after {
+    content: "";
+    border-right: 1px solid #b99b00;
+    margin-left: 0.2em;
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .subtitle {
+        font-size: 0.5em;
+        padding-left: 0.7em;
+    }
+}

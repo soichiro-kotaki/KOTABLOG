@@ -1,9 +1,9 @@
+import { Title } from "./commons/atoms/Title";
+
 export default function Member() {
     return (
         <div className="member" id="member">
-            <h1>
-                Member<span>教員と学生</span>
-            </h1>
+            <Title title="Member" subtitle="教員と学生" />
             <section className="member-about">
                 <img src="/member.png" className="member-img" />
                 <div className="description">
@@ -23,36 +23,12 @@ export default function Member() {
                 .member {
                     background: #f4f5f7;
                     margin-top: 80px;
-                }
-
-                h1 {
-                    font-size: 64px;
-                    margin: 0 auto 30px;
-                    text-align: center;
-                    color: #b99b00;
-                    filter: brightness(115%);
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 }
 
                 p {
                     font-size: 24px;
                     margin: 20px auto 20px;
-                }
-
-                span {
-                    font-size: 24px;
-                    padding-left: 1rem;
-                }
-
-                span::before {
-                    content: "";
-                    border-right: 1px solid #b99b00;
-                    margin-right: 0.2em;
-                }
-
-                span::after {
-                    content: "";
-                    border-right: 1px solid #b99b00;
-                    margin-left: 0.2em;
                 }
 
                 .member-about {
@@ -129,16 +105,6 @@ export default function Member() {
                         width: 90%;
                     }
 
-                    h1 {
-                        font-size: 32px;
-                        font-weight: bold;
-                    }
-
-                    span {
-                        font-size: 0.5em;
-                        padding-left: 0.7em;
-                    }
-
                     .member-img {
                         width: 100%;
                         border-radius: 10px;
@@ -154,10 +120,7 @@ export default function Member() {
                     }
 
                     .btn {
-                        color: #fff;
                         margin: 10% auto 0;
-                        background: #1d2f5f;
-                        padding: 10px 30px;
                     }
                 }
 
