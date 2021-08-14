@@ -6,6 +6,7 @@ import React from "react";
 /* components */
 import { MetaHead } from "../MetaHead";
 import { Header } from "../Header";
+import { ToTopButton } from "../../commons/atoms/ToTopButton";
 import { Footer } from "../Footer";
 import { MenuModal } from "../../modals/MenuModal";
 /* styles */
@@ -27,6 +28,7 @@ export const Presenter = (props) => {
             <MetaHead />
             <Header handleOpenMenuModal={handleOpenMenuModal} />
             {children}
+            <ToTopButton />
             <Footer />
             <MenuModal
                 isMenuModalVisible={isMenuModalVisible}
