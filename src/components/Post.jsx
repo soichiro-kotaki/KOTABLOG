@@ -1,36 +1,12 @@
 import Link from "next/link";
+import { Title } from "./commons/atoms/Title";
+import { PostList } from "./commons/molecules/PostList";
 
 export default function Post() {
     return (
         <div className="post" id="news">
-            <h1>
-                News
-                <span>新着情報</span>
-            </h1>
-            <ul className="post-list">
-                <li className="post-item">
-                    <time className="post-time-stamp" dateTime="2020-11">
-                        2020.11.11
-                    </time>
-                    <a
-                        href="https://www.u-nagano.ac.jp/"
-                        className="post-title"
-                    >
-                        高橋郷くんが、中村ゼミを辞めました。
-                    </a>
-                </li>
-                <li className="post-item">
-                    <time className="post-time-stamp" dateTime="2020-11">
-                        2020.11.11
-                    </time>
-                    <a
-                        href="https://www.u-nagano.ac.jp/"
-                        className="post-title"
-                    >
-                        宮本優くんが、ゼミに遅刻してきました。
-                    </a>
-                </li>
-            </ul>
+            <Title title="News" subtitle="新着情報" />
+            <PostList />
 
             <style jsx>{`
                 .post {
@@ -43,97 +19,12 @@ export default function Post() {
                     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
                 }
 
-                h1 {
-                    font-size: 64px;
-                    text-align: center;
-                    color: #b99b00;
-                    filter: brightness(115%);
-                    margin-bottom: 30px;
-                }
-
-                span {
-                    font-size: 24px;
-                    padding-left: 1rem;
-                    margin-bottom: 30px;
-                }
-
-                span::before {
-                    content: "";
-                    border-right: 1px solid #b99b00;
-                    margin-right: 0.2em;
-                }
-
-                span::after {
-                    content: "";
-                    border-right: 1px solid #b99b00;
-                    margin-left: 0.2em;
-                }
-
-                .post-item {
-                    width: 80%;
-                    display: flex;
-                    margin: 0 auto;
-                    border-bottom: 1px solid #afa7a4;
-                    padding-bottom: 20px;
-                    margin-bottom: 20px;
-                }
-
-                .post-time-stamp {
-                    padding-left: 30px;
-                    padding-right: 100px;
-                    color: #afa7a4;
-                    font-weight: bold;
-                }
-
-                .post-title {
-                    text-decoration: none;
-                }
-
-                .post-title:hover {
-                    text-decoration: underline;
-                }
-
                 // レスポンシブ
 
                 @media (max-width: 480px) {
                     .post {
                         height: 400px;
                         margin: 0 auto;
-                        position: relative;
-                        top: 7%;
-                        left: 0;
-                        width: 90%;
-                    }
-
-                    h1 {
-                        font-size: 32px;
-                        font-weight: bold;
-                    }
-
-                    span {
-                        font-size: 0.5em;
-                        padding-left: 0.7em;
-                    }
-
-                    .post-list {
-                        padding: 0;
-                    }
-
-                    .post-item {
-                        flex-direction: column;
-                        text-align: left;
-                        padding-bottom: 10px;
-                    }
-
-                    .post-time-stamp {
-                        padding-left: 10px;
-                        padding-right: 30px;
-                        font-size: 0.6em;
-                        display: block;
-                    }
-
-                    .post-title {
-                        font-size: 0.7em;
                     }
                 }
 

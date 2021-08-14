@@ -1,9 +1,9 @@
+import { Title } from "./commons/atoms/Title";
+
 export default function Contact() {
     return (
         <div className="contact" id="contact">
-            <h1 id="contact">
-                Contact<span>お問い合わせ</span>
-            </h1>
+            <Title title="Contact" subtitle="お問い合わせ" />
             <div className="divider">
                 <div className="seminar_info">
                     <p>所在地：</p>
@@ -24,20 +24,13 @@ export default function Contact() {
                     color: #333;
                     width: 100%;
                     margin: 80px auto 0;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 }
 
                 .divider {
                     display: flex;
                     width: 90%;
                     margin: 0 auto;
-                }
-
-                h1 {
-                    font-size: 64px;
-                    margin: 0 auto 30px;
-                    text-align: center;
-                    color: #b99b00;
-                    filter: brightness(115%);
                 }
 
                 p {
@@ -47,23 +40,6 @@ export default function Contact() {
 
                 p:nth-child(even) {
                     margin-bottom: 20px;
-                }
-
-                span {
-                    font-size: 24px;
-                    padding-left: 1rem;
-                }
-
-                span::before {
-                    content: "";
-                    border-right: 1px solid #b99b00;
-                    margin-right: 0.2em;
-                }
-
-                span::after {
-                    content: "";
-                    border-right: 1px solid #b99b00;
-                    margin-left: 0.2em;
                 }
 
                 .link {
@@ -120,18 +96,8 @@ export default function Contact() {
                         flex-direction: column;
                     }
 
-                    h1 {
-                        font-size: 32px;
-                        font-weight: bold;
-                    }
-
                     p {
                         font-size: 16px;
-                    }
-
-                    span {
-                        font-size: 0.5em;
-                        padding-left: 0.7em;
                     }
 
                     .link {
