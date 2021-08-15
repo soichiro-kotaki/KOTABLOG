@@ -32,7 +32,7 @@ export const Presenter = () => {
                         <img src="/member.png" className={styles.member_img} />
                         <div className={styles.description}>
                             <p className={styles.member_text}>
-                                当グローバル教養ゼミでは、萱津理佳准教授ご指導のもと、６名が活動しています。
+                                当グローバル教養ゼミでは、萱津准教授ご指導のもと、６名が活動しています。
                             </p>
                             <p className={styles.member_text}>
                                 出身地も違えば、専攻も違う、さまざまなバックグラウンドを持つメンバーが集まり、日々活動しています。
@@ -48,15 +48,15 @@ export const Presenter = () => {
                     <Title title="Contact" subtitle="お問い合わせ" />
                     <div className={styles.divider}>
                         <div className={styles.seminar_info}>
-                            <p className={styles.address}>所在地：</p>
+                            <p className={styles.address}>所在地</p>
                             <p className={styles.address}>
-                                長野県長野市三輪107研究室
+                                長野県長野市三輪8丁目49-7 c107研究室
                             </p>
-                            <p className={styles.address}>メールアドレス：</p>
+                            <p className={styles.address}>メールアドレス</p>
                             <p className={styles.address}>
-                                rika.kayatsu@19G054.u-nagano.ac.jp
+                                rika.kayatsu@.u-nagano.ac.jp
                             </p>
-                            <p className={styles.address}>電話番号：</p>
+                            <p className={styles.address}>電話番号</p>
                             <p className={styles.address}>070-8518-5090</p>
                         </div>
                         <div className={styles.link_contact}>
