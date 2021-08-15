@@ -15,46 +15,46 @@ export const Presenter = (props) => {
     return (
         <header className={styles.menu}>
             <img src="/seminar-logo.png" className={styles.logo} />
-            <h1 className={styles.seminar}>
-                長野県立大学 グローバル教養 萱津ゼミ
-            </h1>
+            <Link href="/">
+                <h1 className={styles.seminar}>
+                    <span className={styles.seminar_name}>長野県立大学 </span>{" "}
+                    <span className={styles.seminar_name}>グローバル教養 </span>{" "}
+                    <span className={styles.seminar_name}>萱津ゼミ</span>
+                </h1>
+            </Link>
             <ul className={styles.nav}>
                 <li className={styles.link}>
-                    <Scroll
-                        to="news"
-                        offset={-130}
-                        duration={600}
-                        smooth={true}
-                    >
-                        <span className={styles.subtitle}>News</span>新着情報
-                    </Scroll>
+                    <Link href="/">
+                        {/* <span className={styles.subtitle}>News</span>新着情報 */}
+                        <a>Home</a>
+                    </Link>
                 </li>
                 <li className={styles.link}>
-                    <Scroll
-                        to="about"
-                        offset={-90}
-                        duration={600}
-                        smooth={true}
-                    >
-                        <span className={styles.subtitle}>About</span>研究紹介
-                    </Scroll>
+                    <Link href="/news">
+                        {/* <span className={styles.subtitle}>News</span>新着情報 */}
+                        <a>News</a>
+                    </Link>
                 </li>
                 <li className={styles.link}>
-                    <Scroll
-                        to="member"
-                        offset={-80}
-                        duration={600}
-                        smooth={true}
-                    >
-                        <span className={styles.subtitle}>Member</span>
+                    <Link href="/about">
+                        {/* <span className={styles.subtitle}>About</span>研究紹介 */}
+                        <a>About</a>
+                    </Link>
+                </li>
+                <li className={styles.link}>
+                    <Link href="/member">
+                        {/* <span className={styles.subtitle}>Member</span>
                         教員と学生
-                    </Scroll>
+                     */}
+                        <a>Member</a>
+                    </Link>
                 </li>
                 <li className={styles.link}>
-                    <Scroll to="contact" duration={600} smooth={true}>
-                        <span className={styles.subtitle}>Contact</span>
-                        お問い合わせ
-                    </Scroll>
+                    <Link href="/contact">
+                        {/* <span className={styles.subtitle}>Contact</span>
+                        お問い合わせ */}
+                        <a>Contact</a>
+                    </Link>
                 </li>
             </ul>
             {/*  */}

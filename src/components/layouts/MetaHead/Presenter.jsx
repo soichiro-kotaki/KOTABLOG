@@ -20,6 +20,10 @@ export const Presenter = (props) => {
                 href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
                 rel="stylesheet"
             ></link>
+            <link
+                href="https://fonts.googleapis.com/css?family=Caveat"
+                rel="stylesheet"
+            />
         </Head>
     );
 };
