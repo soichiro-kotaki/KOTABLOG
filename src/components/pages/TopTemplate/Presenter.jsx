@@ -1,9 +1,12 @@
-import styles from "./styles.module.scss";
+import Link from "next/link";
 
 import { BaseLayout } from "../../layouts/BaseLayout";
 import { Title } from "../../commons/atoms/Title";
 import { PostList } from "../../commons/molecules/PostList";
+import { Button } from "../../commons/atoms/Button";
 import { Card } from "../../commons/molecules/Card";
+
+import styles from "./styles.module.scss";
 
 export const Presenter = () => {
     return (
@@ -11,14 +14,18 @@ export const Presenter = () => {
             <main className={styles.main}>
                 <div className={styles.top}>
                     <div className={styles.top_img}></div>
-                    <h2 className={styles.top_description}>
-                        「IT」を活用した新たな価値創造について研究しています
+                    <h2 className={styles.top_description}>Through "IT" .</h2>
+                    <h2 className={styles.top_sub_description}>
+                        #connect #study #programming.
                     </h2>
                 </div>
 
                 <div className={styles.post} id="news">
                     <Title title="News" subtitle="新着情報" />
                     <PostList />
+                    <Link href="/news">
+                        <a className={styles.btn_news}>一覧を見る</a>
+                    </Link>
                 </div>
 
                 <div className={styles.about} id="about">
@@ -38,7 +45,11 @@ export const Presenter = () => {
                                 出身地も違えば、専攻も違う、さまざまなバックグラウンドを持つメンバーが集まり、日々活動しています。
                             </p>
                             <div className={styles.link_member}>
-                                <div className={styles.btn_member}>MORE</div>
+                                <Link href="/member">
+                                    <div className={styles.btn_member}>
+                                        MORE
+                                    </div>
+                                </Link>
                             </div>
                         </div>
                     </section>
@@ -60,9 +71,11 @@ export const Presenter = () => {
                             <p className={styles.address}>070-8518-5090</p>
                         </div>
                         <div className={styles.link_contact}>
-                            <a className={styles.btn_contact}>
-                                お問い合わせフォームへ
-                            </a>
+                            <Link href="/contact">
+                                <a className={styles.btn_contact}>
+                                    お問い合わせフォームへ
+                                </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

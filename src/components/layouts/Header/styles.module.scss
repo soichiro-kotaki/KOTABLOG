@@ -26,6 +26,15 @@
     letter-spacing: 0.2em;
 }
 
+.seminar:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.seminar_name {
+    display: inline-block;
+}
+
 .nav {
     flex: 1;
     display: flex;
@@ -34,13 +43,14 @@
 }
 
 .link {
-    width: 130px;
+    width: 15%;
     display: block;
     list-style: none;
     border-radius: 5px;
     color: #fff;
     text-align: center;
     text-decoration: none;
+    font-size: 1em;
 }
 
 .link:hover {

@@ -1,5 +1,6 @@
 import Modal from "react-modal";
 import { Link as Scroll } from "react-scroll";
+import Link from "next/link";
 
 import styles from "./styles.module.scss";
 
@@ -29,39 +30,29 @@ export const Presenter = (props) => {
             <ul className={styles.nav}>
                 <li className={styles.title}>Menu</li>
                 <li className={styles.link}>
-                    <Scroll
-                        to="news"
-                        offset={-130}
-                        duration={600}
-                        smooth={true}
-                    >
+                    <Link href="/">
+                        <span className={styles.subtitle}>Home</span>
+                    </Link>
+                </li>
+                <li className={styles.link}>
+                    <Link href="news">
                         <span className={styles.subtitle}>News</span>
-                    </Scroll>
+                    </Link>
                 </li>
                 <li className={styles.link}>
-                    <Scroll
-                        to="about"
-                        offset={-90}
-                        duration={600}
-                        smooth={true}
-                    >
+                    <Link href="/about">
                         <span className={styles.subtitle}>About</span>
-                    </Scroll>
+                    </Link>
                 </li>
                 <li className={styles.link}>
-                    <Scroll
-                        to="member"
-                        offset={-80}
-                        duration={600}
-                        smooth={true}
-                    >
+                    <Link href="/member">
                         <span className={styles.subtitle}>Member</span>
-                    </Scroll>
+                    </Link>
                 </li>
                 <li className={styles.link}>
-                    <Scroll to="contact" duration={600} smooth={true}>
+                    <Link href="/contact">
                         <span className={styles.subtitle}>Contact</span>
-                    </Scroll>
+                    </Link>
                 </li>
                 <p className={styles.close} onClick={handleCloseMenuModal}>
                     Close
