@@ -13,15 +13,11 @@
 }
 @keyframes fadeInFromLeft2 {
     0% {
-        right: -100%;
-    }
-
-    75% {
-        right: 20%;
+        opacity: 0;
     }
 
     100% {
-        right: 10%;
+        opacity: 1;
     }
 }
 
@@ -56,13 +52,13 @@
 
 .top_description {
     position: absolute;
-    top: 15%;
+    top: 0;
     left: 20%;
     transform: translate(-50%);
     z-index: 2;
     font-size: 5rem;
     color: #dddcda;
-    border: 1px solid #dddcda;
+    // border: 1px solid #dddcda;
     padding: 1em;
     font-family: "Caveat", cursive;
     animation: fadeInFromLeft 3s ease-in-out 0s 1 normal;
@@ -70,15 +66,14 @@
 
 .top_sub_description {
     position: absolute;
-    bottom: 10%;
-    right: 10%;
+    bottom: 30%;
+    right: 0;
     z-index: 2;
     font-size: 4rem;
     color: #dddcda;
-    border: 1px solid #dddcda;
     padding: 1em;
     font-family: "Caveat", cursive;
-    animation: fadeInFromLeft2 3s ease-in-out 0s 1 normal;
+    animation: fadeInFromLeft2 5s ease-in-out 0s 1 normal;
 }
 
 .post {
@@ -296,7 +291,8 @@
     }
 
     .top_sub_description {
-        display: none;
+        font-size: 1em;
+        bottom: 30px;
     }
 
     .post {
