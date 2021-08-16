@@ -11,7 +11,7 @@
         left: 20%;
     }
 }
-@keyframes fadeInFromLeft2 {
+@keyframes fadeIn {
     0% {
         opacity: 0;
     }
@@ -58,9 +58,9 @@
     z-index: 2;
     font-size: 5rem;
     color: #dddcda;
-    // border: 1px solid #dddcda;
     padding: 1em;
     font-family: "Caveat", cursive;
+
     animation: fadeInFromLeft 3s ease-in-out 0s 1 normal;
 }
 
@@ -73,7 +73,7 @@
     color: #dddcda;
     padding: 1em;
     font-family: "Caveat", cursive;
-    animation: fadeInFromLeft2 5s ease-in-out 0s 1 normal;
+    animation: fadeIn 5s ease-in-out 0s 1 normal;
 }
 
 .post {
