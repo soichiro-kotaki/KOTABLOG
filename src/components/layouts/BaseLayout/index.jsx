@@ -6,22 +6,22 @@ import { useState, useCallback } from "react";
 
 /* components */
 import { Presenter } from "./Presenter";
-/* types */
 
 export const BaseLayout = (props) => {
     const { children } = props;
-    // MenuModal用のstate
+
+    // State for MenuModal
     const [isMenuModalVisible, setIsMenuModalVisible] = useState(false);
 
     /**
-     * MenuModalを開く処理
+     * Function for open MenuModal
      */
     const handleOpenMenuModal = useCallback(() => {
         setIsMenuModalVisible(true);
     }, []);
 
     /**
-     * MenuModalを閉じる処理
+     *Function to close MenuModal
      */
     const handleCloseMenuModal = useCallback(() => {
         setIsMenuModalVisible(false);
