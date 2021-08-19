@@ -3,10 +3,7 @@
  * PresentationalComponent
  */
 import Link from "next/link";
-import { Link as Scroll } from "react-scroll";
 
-/* components */
-// import { MenuIcon } from "../../commons/ToTopButton/icons/MenuIcon";
 /* styles */
 import styles from "./styles.module.scss";
 
@@ -57,7 +54,8 @@ export const Presenter = (props) => {
                     </Link>
                 </li>
             </ul>
-            {/*  */}
+
+            {/* Hamburger menu for smartphone */}
             <div className={styles.menubar} onClick={handleOpenMenuModal}>
                 <img src="/menu.png" />
             </div>

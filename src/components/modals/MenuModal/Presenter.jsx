@@ -9,7 +9,6 @@ Modal.setAppElement("#__next");
 export const Presenter = (props) => {
     /* props */
     const { isMenuModalVisible, handleCloseMenuModal } = props;
-    /* hooks */
 
     return (
         <Modal
