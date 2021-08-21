@@ -8,7 +8,9 @@ import { Card } from "../../commons/molecules/Card";
 
 import styles from "./styles.module.scss";
 
-export const Presenter = () => {
+export const Presenter = (props) => {
+    const { allPostsData } = props;
+
     return (
         <BaseLayout>
             <main className={styles.main}>
@@ -22,7 +24,7 @@ export const Presenter = () => {
 
                 <div className={styles.post} id="news">
                     <Title title="News" subtitle="新着情報" />
-                    <PostList />
+                    <PostList allPostsData={allPostsData} />
                     <Link href="/news">
                         <a className={styles.btn_news}>一覧を見る</a>
                     </Link>

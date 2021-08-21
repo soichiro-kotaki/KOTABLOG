@@ -1,10 +1,11 @@
 import styles from "./styles.module.scss";
 import { PostItem } from "../../atoms/PostItem";
 
-export function Presenter() {
+export function Presenter(props) {
+    const { allPostsData } = props;
     return (
         <ul className={styles.post_list}>
-            <PostItem />
+            <PostItem allPostsData={allPostsData} />
         </ul>
     );
 }
