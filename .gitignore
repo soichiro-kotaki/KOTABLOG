@@ -36,5 +36,4 @@ yarn-error.log*
 *.css
 *.css.map
 
-# post
-/posts
+
