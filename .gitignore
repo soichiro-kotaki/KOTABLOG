@@ -36,4 +36,7 @@ yarn-error.log*
 *.css
 *.css.map
 
+# node
+/.node-version
+
 
