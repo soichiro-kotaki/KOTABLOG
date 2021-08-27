@@ -18,14 +18,14 @@ export const Presenter = (props) => {
                     <div className={styles.top_img}></div>
                     <h2 className={styles.top_description}>Through "IT" .</h2>
                     <h2 className={styles.top_sub_description}>
-                        #connect #study #programming.
+                        #studying #education #programming
                     </h2>
                 </div>
 
                 <div className={styles.post} id="news">
                     <Title title="News" subtitle="新着情報" />
                     <PostList allPostsData={allPostsData} />
-                    <Link href="/news">
+                    <Link href="/postList">
                         <a className={styles.btn_news}>一覧を見る</a>
                     </Link>
                 </div>

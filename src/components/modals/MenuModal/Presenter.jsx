@@ -34,7 +34,7 @@ export const Presenter = (props) => {
                     </Link>
                 </li>
                 <li className={styles.link}>
-                    <Link href="news">
+                    <Link href="postList">
                         <span className={styles.subtitle}>News</span>
                     </Link>
                 </li>
