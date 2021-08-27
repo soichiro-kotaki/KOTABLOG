@@ -1,4 +1,3 @@
-import { BaseLayout } from "../../components/layouts/BaseLayout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import { PostPageTemplate } from "../../components/pages/PostPageTemplate";
 
