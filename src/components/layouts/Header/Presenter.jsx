@@ -11,7 +11,7 @@ export const Presenter = (props) => {
     const { handleOpenMenuModal } = props;
     return (
         <header className={styles.menu}>
-            <img src="/seminar-logo.png" className={styles.logo} />
+            <img src="/logo.png" className={styles.logo} />
             <Link href="/">
                 <h1 className={styles.seminar}>
                     <span className={styles.seminar_name}>長野県立大学 </span>{" "}
