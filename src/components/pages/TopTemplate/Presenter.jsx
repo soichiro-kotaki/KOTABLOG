@@ -41,7 +41,7 @@ export const Presenter = (props) => {
                         <img src="/member.png" className={styles.member_img} />
                         <div className={styles.description}>
                             <p className={styles.member_text}>
-                                当グローバル教養ゼミでは、萱津准教授ご指導のもと、６名が活動しています。
+                                当グローバル教養ゼミでは、萱津准教授ご指導のもと、６名の学生が活動しています。
                             </p>
                             <p className={styles.member_text}>
                                 出身地も違えば、専攻も違う、さまざまなバックグラウンドを持つメンバーが集まり、日々活動しています。
