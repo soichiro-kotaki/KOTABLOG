@@ -1,18 +1,74 @@
 .container {
-    height: 100vh;
     color: #333;
+    background: #f4f5f7;
+    padding-top: 101px;
 }
 
-.title {
-    font-size: 3em;
-    padding-top: 3em;
-    padding-left: 1em;
+.wrapper {
+    width: 60%;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.label_input_name {
+    display: block;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.input_name {
+    background: #dddcda;
+    width: 100%;
+    text-align: left;
+    padding: 0.2em;
+    border: 1px solid #cecece;
+}
+
+.wrapper_input_message {
+    width: 100%;
+}
+
+.label_input_message {
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 100%;
+    margin-top: 3em;
+    display: block;
+    text-align: left;
+}
+
+.input_message {
+    background: #dddcda;
+    text-align: left;
+    padding: 0.5em;
+    width: 100%;
+    border: 1px solid #cecece;
+    font-size: 1em;
+}
+
+.submit_btn {
+    font-size: 1.5em;
+    background: #1d2f5f;
+    color: #f4f5f7;
+    margin: 2em;
+    padding: 0.5em 1.5em;
+    border-radius: 100vh;
 }
 
 @media (max-width: 480px) {
-    .title {
-        font-size: 1.5em;
-        padding-top: 3em;
-        padding-left: 1em;
+    .container {
+        padding-top: 61px;
+
+        .wrapper {
+            width: 80%;
+
+            .submit_btn {
+                margin: 2em auto;
+                font-size: 1em;
+                padding: 0.5em 1.5em;
+                border-radius: 100vh;
+            }
+        }
     }
 }
