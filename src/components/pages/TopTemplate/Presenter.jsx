@@ -3,7 +3,6 @@ import Link from "next/link";
 import { BaseLayout } from "../../layouts/BaseLayout";
 import { Title } from "../../commons/atoms/Title";
 import { PostList } from "../../commons/molecules/PostList";
-import { Button } from "../../commons/atoms/Button";
 import { Card } from "../../commons/molecules/Card";
 
 import styles from "./styles.module.scss";

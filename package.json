@@ -8,6 +8,7 @@
         "start": "next start"
     },
     "dependencies": {
+        "cypress": "^8.4.1",
         "gray-matter": "^4.0.3",
         "next": "^10.0.0",
         "react": "17.0.1",
