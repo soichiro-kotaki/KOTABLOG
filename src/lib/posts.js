@@ -26,6 +26,7 @@ export function getSortedPostsData() {
             ...matterResult.data,
         };
     });
+
     // 投稿を日付でソートする
     return allPostsData.sort((a, b) => {
         if (a.date < b.date) {
