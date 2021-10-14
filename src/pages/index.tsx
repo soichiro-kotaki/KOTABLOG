@@ -17,7 +17,7 @@ type Props = {
     ];
 };
 
-const Home: React.VFC<Props> = (props) => {
+const Home: React.FC<Props> = (props) => {
     const { allPostsData } = props;
 
     return <TopTemplate allPostsData={allPostsData} />;
