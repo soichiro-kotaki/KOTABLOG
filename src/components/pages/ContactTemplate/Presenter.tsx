@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 // コンポーネント
 import { BaseLayout } from "../../layouts/BaseLayout";
@@ -11,9 +11,9 @@ export const Presenter: React.FC = () => {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
 
-    const submitForm = () => {
-        const url = process.env.NEXT_PUBLIC_TEAMS_INCOMING_WEBHOOK;
+    const url = process.env.NEXT_PUBLIC_TEAMS_INCOMING_WEBHOOK;
 
+    const submitForm = () => {
         const payload = {
             text: `お問い合わせがありました。\n
                     氏名： ${name} \n
@@ -34,7 +34,7 @@ export const Presenter: React.FC = () => {
             <div className={styles.container}>
                 <Title title="Contact" subtitle="お問い合わせ" />
                 <div className={styles.wrapper}>
-                    <form>
+                    <form action="" method="post">
                         <div>
                             <label
                                 htmlFor="name"
@@ -46,9 +46,12 @@ export const Presenter: React.FC = () => {
                                 type="text"
                                 id="name"
                                 name="name"
+                                autoFocus
                                 className={styles.input_name}
                                 value={name}
-                                onChange={(e) => {
+                                onChange={(
+                                    e: React.ChangeEvent<HTMLInputElement>
+                                ) => {
                                     setName(e.target.value);
                                 }}
                             />
@@ -67,7 +70,9 @@ export const Presenter: React.FC = () => {
                                 cols={50}
                                 className={styles.input_message}
                                 value={message}
-                                onChange={(e) => {
+                                onChange={(
+                                    e: React.ChangeEvent<HTMLTextAreaElement>
+                                ) => {
                                     setMessage(e.target.value);
                                 }}
                             ></textarea>
