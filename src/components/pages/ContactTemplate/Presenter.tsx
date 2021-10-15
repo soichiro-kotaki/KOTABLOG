@@ -11,9 +11,9 @@ export const Presenter: React.FC = () => {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
 
-    const url = process.env.NEXT_PUBLIC_TEAMS_INCOMING_WEBHOOK;
-
     const submitForm = () => {
+        const url = process.env.NEXT_PUBLIC_TEAMS_INCOMING_WEBHOOK;
+
         const payload = {
             text: `お問い合わせがありました。\n
                     氏名： ${name} \n
@@ -23,7 +23,9 @@ export const Presenter: React.FC = () => {
         fetch(url, {
             method: "POST",
             body: JSON.stringify(payload),
+            mode: "no-cors",
         }).then(() => {
+            alert("お問い合わせ内容を送信しました。");
             setName("");
             setMessage("");
         });
@@ -34,7 +36,7 @@ export const Presenter: React.FC = () => {
             <div className={styles.container}>
                 <Title title="Contact" subtitle="お問い合わせ" />
                 <div className={styles.wrapper}>
-                    <form action="" method="post">
+                    <form>
                         <div>
                             <label
                                 htmlFor="name"
@@ -78,7 +80,7 @@ export const Presenter: React.FC = () => {
                             ></textarea>
                         </div>
                         <input
-                            type="submit"
+                            type="button"
                             value="送信する"
                             className={styles.submit_btn}
                             onClick={() => {
