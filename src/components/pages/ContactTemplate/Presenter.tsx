@@ -7,29 +7,22 @@ import { Title } from "../../commons/atoms/Title";
 // スタイリング
 import styles from "./styles.module.scss";
 
-export const Presenter: React.FC = () => {
-    const [name, setName] = useState("");
-    const [message, setMessage] = useState("");
+type Props = {
+    name: string;
+    message: string;
+    handleNameOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    handleMessageOnChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+    handleSubmitForm: (name: string, message: string) => any;
+};
 
-    const submitForm = () => {
-        const url = process.env.NEXT_PUBLIC_TEAMS_INCOMING_WEBHOOK;
-
-        const payload = {
-            text: `お問い合わせがありました。\n
-                    氏名： ${name} \n
-                    問い合わせ内容： ${message}`,
-        };
-
-        fetch(url, {
-            method: "POST",
-            body: JSON.stringify(payload),
-            mode: "no-cors",
-        }).then(() => {
-            alert("お問い合わせ内容を送信しました。");
-            setName("");
-            setMessage("");
-        });
-    };
+export const Presenter: React.FC<Props> = (props) => {
+    const {
+        name,
+        message,
+        handleNameOnChange,
+        handleMessageOnChange,
+        handleSubmitForm,
+    } = props;
 
     return (
         <BaseLayout>
@@ -51,11 +44,7 @@ export const Presenter: React.FC = () => {
                                 autoFocus
                                 className={styles.input_name}
                                 value={name}
-                                onChange={(
-                                    e: React.ChangeEvent<HTMLInputElement>
-                                ) => {
-                                    setName(e.target.value);
-                                }}
+                                onChange={handleNameOnChange}
                             />
                         </div>
                         <div className={styles.wrapper_input_message}>
@@ -72,11 +61,7 @@ export const Presenter: React.FC = () => {
                                 cols={50}
                                 className={styles.input_message}
                                 value={message}
-                                onChange={(
-                                    e: React.ChangeEvent<HTMLTextAreaElement>
-                                ) => {
-                                    setMessage(e.target.value);
-                                }}
+                                onChange={handleMessageOnChange}
                             ></textarea>
                         </div>
                         <input
@@ -84,7 +69,7 @@ export const Presenter: React.FC = () => {
                             value="送信する"
                             className={styles.submit_btn}
                             onClick={() => {
-                                submitForm();
+                                handleSubmitForm(name, message);
                                 console.log(name, message);
                             }}
                         />
