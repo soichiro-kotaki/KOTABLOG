@@ -27,6 +27,7 @@ export const ContactTemplate: React.FC = () => {
         fetch(url, {
             method: "POST",
             body: JSON.stringify(payload),
+            mode: "no-cors",
         }).then(() => {
             alert("お問い合わせ内容を送信しました。");
             setName("");
