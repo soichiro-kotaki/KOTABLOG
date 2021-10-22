@@ -20,6 +20,7 @@ type Props = {
 
 export const Presenter: React.FC<Props> = (props) => {
     const { allPostsData } = props;
+
     return (
         <BaseLayout>
             <div className={styles.container}>
