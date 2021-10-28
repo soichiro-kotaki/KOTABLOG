@@ -7,6 +7,9 @@ import { Title } from "../../commons/atoms/Title";
 import { PostList } from "../../commons/molecules/PostList";
 import { Card } from "../../commons/molecules/Card";
 
+// ライブラリ
+import GoogleMapReact from "google-map-react";
+
 // スタイリング
 import styles from "./styles.module.scss";
 
@@ -18,19 +21,24 @@ type Props = {
             date: string;
         }
     ];
+    defaultLatLng: {
+        lat: number;
+        lng: number;
+    };
+    handleApiLoaded: (map: any, maps: any) => void;
 };
 
 export const Presenter: React.FC<Props> = (props) => {
-    const { allPostsData } = props;
+    const { allPostsData, defaultLatLng, handleApiLoaded } = props;
 
     return (
         <BaseLayout>
             <main className={styles.main}>
                 <div className={styles.top}>
                     <div className={styles.top_img}></div>
-                    <h2 className={styles.top_description}>Through "IT" .</h2>
+                    <h2 className={styles.top_description}>Be enthusiastic.</h2>
                     <h2 className={styles.top_sub_description}>
-                        #studying #education #programming
+                        #UX #education #programming
                     </h2>
                 </div>
 
@@ -77,20 +85,37 @@ export const Presenter: React.FC<Props> = (props) => {
                             <p className={styles.address}>
                                 長野県長野市三輪8丁目49-7 c107研究室
                             </p>
-                            <p className={styles.address}>メールアドレス</p>
                             <p className={styles.address}>
-                                rika.kayatsu@.u-nagano.ac.jp
+                                メールアドレス（サイト運営者）
+                            </p>
+                            <p className={styles.address}>
+                                19G054@.u-nagano.ac.jp
                             </p>
                             <p className={styles.address}>電話番号</p>
                             <p className={styles.address}>070-8518-5090</p>
                         </div>
-                        <div className={styles.link_contact}>
-                            <Link href="/contact">
-                                <a className={styles.btn_contact}>
-                                    お問い合わせフォームへ
-                                </a>
-                            </Link>
+                        <div className={styles.box__map}>
+                            <GoogleMapReact
+                                bootstrapURLKeys={{
+                                    key: process.env
+                                        .NEXT_PUBLIC_GOOGLE_MAP_API_KEY,
+                                }}
+                                defaultCenter={{
+                                    lat: 36.6661086,
+                                    lng: 138.2004124,
+                                }}
+                                defaultZoom={15}
+                                onGoogleApiLoaded={handleApiLoaded}
+                                yesIWantToUseGoogleMapApiInternals={true}
+                            />
                         </div>
+                    </div>
+                    <div className={styles.link_contact}>
+                        <Link href="/contact">
+                            <a className={styles.btn_contact}>
+                                お問い合わせフォームへ
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </main>
