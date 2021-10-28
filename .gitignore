@@ -39,7 +39,5 @@ yarn-error.log*
 # node
 /.node-version
 
-# cypress
-/cypress
 
 
