@@ -100,10 +100,7 @@ export const Presenter: React.FC<Props> = (props) => {
                                     key: process.env
                                         .NEXT_PUBLIC_GOOGLE_MAP_API_KEY,
                                 }}
-                                defaultCenter={{
-                                    lat: 36.6661086,
-                                    lng: 138.2004124,
-                                }}
+                                defaultCenter={defaultLatLng}
                                 defaultZoom={15}
                                 onGoogleApiLoaded={handleApiLoaded}
                                 yesIWantToUseGoogleMapApiInternals={true}
