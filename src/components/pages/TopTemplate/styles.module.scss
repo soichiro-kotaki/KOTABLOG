@@ -203,32 +203,39 @@
 }
 
 .address:nth-child(even) {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding-left: 1.5em;
 }
 
 .address:nth-child(odd) {
     font-weight: bold;
+    font-size: 1.5em;
     padding-left: 0.5em;
     border-left: 5px solid #1d2f5f;
     margin-bottom: 10px;
 }
 
+.box__map {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+
 .link_contact {
-    height: 98px;
     text-align: center;
     margin: 80px auto;
+    width: 300px;
 }
 
 .btn_contact {
     display: flex;
     color: #fff;
-    margin: 25px auto 0;
     background: #1d2f5f;
     padding: 10px 30px;
     border-radius: 100vh;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     align-items: center;
+    border: 1px solid transparent;
 }
 
 .btn_contact:hover {
@@ -351,8 +358,16 @@
         font-size: 16px;
     }
 
+    .address:nth-child(odd) {
+        font-size: 1.2em;
+    }
+
+    .box__map {
+        width: 100%;
+        height: 300px;
+    }
+
     .link_contact {
-        margin-top: 0px;
-        margin-bottom: 30px;
+        margin: 50px auto;
     }
 }

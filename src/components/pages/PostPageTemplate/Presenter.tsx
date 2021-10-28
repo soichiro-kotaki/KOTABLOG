@@ -20,7 +20,7 @@ export const Presenter: React.FC<Props> = (props) => {
         <BaseLayout>
             <article className={styles.container_post}>
                 <h1 className={styles.title_post}>{postData.title}</h1>
-                <p className={styles.date_post}>{postData.date}</p>
+                <p className={styles.date_post}>{`投稿日: ${postData.date}`}</p>
                 <div className={styles.content_post}>
                     <div
                         dangerouslySetInnerHTML={{

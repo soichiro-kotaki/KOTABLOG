@@ -4,11 +4,13 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 0.7rem;
-    border-bottom: 1px solid gray;
+
     display: flex;
     z-index: 2;
     background: #1c273e;
     align-items: center;
+    color: #f4f5f7;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -46,7 +48,7 @@
     display: block;
     list-style: none;
     border-radius: 5px;
-    color: #fff;
+    color: #f4f5f7;
     text-align: center;
     text-decoration: none;
     font-size: 1em;

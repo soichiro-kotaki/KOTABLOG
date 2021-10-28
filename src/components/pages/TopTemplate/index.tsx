@@ -15,5 +15,33 @@ type Props = {
 export const TopTemplate: React.FC<Props> = (props) => {
     const { allPostsData } = props;
 
-    return <Presenter allPostsData={allPostsData} />;
+    const defaultLatLng = {
+        lat: 36.6661086,
+        lng: 138.2004124,
+    };
+
+    const handleApiLoaded = ({ map, maps }) => {
+        new maps.Marker({
+            map,
+            position: {
+                lat: 36.6661086,
+                lng: 138.2004124,
+            },
+            label: {
+                text: "長野県立大学",
+                color: "#333",
+                fontFamily: "sans-serif",
+                fontWeight: "bold",
+                fontSize: "1em",
+            },
+        });
+    };
+
+    return (
+        <Presenter
+            allPostsData={allPostsData}
+            handleApiLoaded={handleApiLoaded}
+            defaultLatLng={defaultLatLng}
+        />
+    );
 };
