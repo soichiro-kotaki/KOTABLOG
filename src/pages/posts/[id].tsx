@@ -5,6 +5,7 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 
 // コンポーネント
 import { PostPageTemplate } from "../../components/pages/PostPageTemplate";
+import { GetStaticPaths, GetStaticProps } from "next";
 
 type Props = {
     postData: {
@@ -22,16 +23,16 @@ const post: React.FC<Props> = (props) => {
 };
 export default post;
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
     // id としてとりうる値のリストを返す
     const paths = getAllPostIds();
     return {
         paths,
         fallback: false,
     };
-}
+};
 
-export async function getStaticProps({ params }) {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
     // params.id を使用して、ブログの投稿に必要なデータを取得する
     const postData = await getPostData(params.id);
     return {
@@ -39,4 +40,4 @@ export async function getStaticProps({ params }) {
             postData,
         },
     };
-}
+};
