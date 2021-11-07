@@ -17,10 +17,22 @@ type Props = {
     allPostsData: [
         {
             id: string;
+            createdAt: string;
+            updatedAt: string;
+            publishedAt: string;
+            revisedAt: string;
+            img: {
+                url: string;
+                height: string;
+                width: string;
+            };
             title: string;
             date: string;
+            body: string;
+            categories: [];
         }
     ];
+    totalCount: number;
     defaultLatLng: {
         lat: number;
         lng: number;
@@ -29,7 +41,7 @@ type Props = {
 };
 
 export const Presenter: React.FC<Props> = (props) => {
-    const { allPostsData, defaultLatLng, handleApiLoaded } = props;
+    const { allPostsData, totalCount, defaultLatLng, handleApiLoaded } = props;
 
     return (
         <BaseLayout>
@@ -44,7 +56,10 @@ export const Presenter: React.FC<Props> = (props) => {
 
                 <div className={styles.post} id="news">
                     <Title title="News" subtitle="新着情報" />
-                    <PostList allPostsData={allPostsData} />
+                    <PostList
+                        allPostsData={allPostsData}
+                        totalCount={totalCount}
+                    />
                     <Link href="/postList">
                         <a className={styles.btn_news}>一覧を見る</a>
                     </Link>

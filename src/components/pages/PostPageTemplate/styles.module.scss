@@ -25,8 +25,9 @@
 }
 
 .content_post {
-    width: 90%;
-    margin: 0 auto;
+    width: 60%;
+    // margin: 0 auto;
+    margin-left: 3em;
 }
 
 .text_post {
@@ -39,15 +40,17 @@
         color: #f4f5f7;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         padding-left: 0.5em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
         margin-top: 2.5em;
-        margin-bottom: 0.8em;
+        margin-bottom: 1.2em;
         border-radius: 5px;
     }
 
     p {
-        font-size: 0.8em;
+        font-size: 0.7em;
         width: 90%;
-        margin: 0 0 0.5em 0.5em;
+        margin: 0 0 0.8em 1em;
 
         &:last-child {
             margin-bottom: 2em;
@@ -55,7 +58,7 @@
     }
 
     h2 {
-        font-size: 1em;
+        font-size: 0.9em;
         margin-left: 0.3em;
     }
 
@@ -77,9 +80,10 @@
         margin-bottom: 2em;
         display: block;
         width: 30%;
+        filter: brightness(300%);
 
         &:hover {
-            filter: brightness(300%);
+            filter: brightness(400%);
         }
     }
 }
@@ -98,8 +102,17 @@
         padding-left: 1em;
     }
 
+    .content_post {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .text_post {
         font-size: 0.5em;
+
+        p {
+            font-size: 0.8em;
+        }
 
         a {
             width: 60%;

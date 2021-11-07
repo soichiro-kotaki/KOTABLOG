@@ -1,7 +1,7 @@
 import React from "react";
 
 // モジュール
-import { getAllPostIds, getPostData } from "../../lib/posts";
+import { client } from "../../lib/client";
 
 // コンポーネント
 import { PostPageTemplate } from "../../components/pages/PostPageTemplate";
@@ -10,9 +10,19 @@ import { GetStaticPaths, GetStaticProps } from "next";
 type Props = {
     postData: {
         id: string;
-        contentHtml: string;
+        createdAt: string;
+        updatedAt: string;
+        publishedAt: string;
+        revisedAt: string;
+        img: {
+            url: string;
+            height: string;
+            width: string;
+        };
         title: string;
         date: string;
+        body: string;
+        categories: [];
     };
 };
 
@@ -24,17 +34,20 @@ const post: React.FC<Props> = (props) => {
 export default post;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    // id としてとりうる値のリストを返す
-    const paths = getAllPostIds();
-    return {
-        paths,
-        fallback: false,
-    };
+    // id (urlのパスに含まれるもの）としてとりうる値のリストを返す
+    const data = await client.get({ endpoint: "posts" });
+
+    const paths = data.contents.map((content: any) => `/posts/${content.id}`);
+
+    return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    // params.id を使用して、ブログの投稿に必要なデータを取得する
-    const postData = await getPostData(params.id);
+    // params.id を使用して、ブログの投稿記事に必要なデータを取得する
+    const postID = params.id;
+
+    const postData = await client.get({ endpoint: `posts/${postID}` });
+
     return {
         props: {
             postData,
