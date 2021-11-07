@@ -5,13 +5,26 @@ type Props = {
     allPostsData: [
         {
             id: string;
+            createdAt: string;
+            updatedAt: string;
+            publishedAt: string;
+            revisedAt: string;
+            img: {
+                url: string;
+                height: string;
+                width: string;
+            };
             title: string;
             date: string;
+            body: string;
+            categories: [];
         }
     ];
+    totalCount: number;
 };
 
 export const PostItem: React.FC<Props> = (props) => {
-    const { allPostsData } = props;
-    return <Presenter allPostsData={allPostsData} />;
+    const { allPostsData, totalCount } = props;
+
+    return <Presenter allPostsData={allPostsData} totalCount={totalCount} />;
 };

@@ -5,9 +5,19 @@ import { Presenter } from "./Presenter";
 type Props = {
     postData: {
         id: string;
-        contentHtml: string;
+        createdAt: string;
+        updatedAt: string;
+        publishedAt: string;
+        revisedAt: string;
+        img: {
+            url: string;
+            height: string;
+            width: string;
+        };
         title: string;
         date: string;
+        body: string;
+        categories: [];
     };
 };
 

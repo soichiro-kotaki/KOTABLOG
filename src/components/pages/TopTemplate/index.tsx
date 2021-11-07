@@ -6,14 +6,26 @@ type Props = {
     allPostsData: [
         {
             id: string;
+            createdAt: string;
+            updatedAt: string;
+            publishedAt: string;
+            revisedAt: string;
+            img: {
+                url: string;
+                height: string;
+                width: string;
+            };
             title: string;
             date: string;
+            body: string;
+            categories: [];
         }
     ];
+    totalCount: number;
 };
 
 export const TopTemplate: React.FC<Props> = (props) => {
-    const { allPostsData } = props;
+    const { allPostsData, totalCount } = props;
 
     const defaultLatLng = {
         lat: 36.6661086,
@@ -30,6 +42,7 @@ export const TopTemplate: React.FC<Props> = (props) => {
     return (
         <Presenter
             allPostsData={allPostsData}
+            totalCount={totalCount}
             handleApiLoaded={handleApiLoaded}
             defaultLatLng={defaultLatLng}
         />
