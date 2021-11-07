@@ -72,6 +72,7 @@ export const Presenter: React.FC<Props> = (props) => {
                                 handleSubmitForm(name, message);
                                 console.log(name, message);
                             }}
+                            disabled={!name || !message}
                         />
                     </form>
                 </div>
