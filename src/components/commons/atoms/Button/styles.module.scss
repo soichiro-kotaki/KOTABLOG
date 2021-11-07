@@ -1,8 +1,6 @@
 .link {
     height: 98px;
     border-top: 1px solid #dddcda;
-    //member部分のボタンのスタイル
-    // margin-top: 80px;
     text-align: center;
 }
 
@@ -43,13 +41,6 @@
 }
 
 @media (max-width: 480px) {
-    // .link {
-    //     margin-top: 10px;
-    // }
-
-    // .btn {
-    //     margin: 10% auto 0;
-    // }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
