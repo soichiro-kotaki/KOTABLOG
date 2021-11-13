@@ -17,7 +17,10 @@ type Props = {
         title: string;
         date: string;
         body: string;
-        categories: [];
+        category: {
+            id: string;
+            name: string;
+        };
     };
 };
 

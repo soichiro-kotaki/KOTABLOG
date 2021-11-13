@@ -15,6 +15,22 @@
     font-weight: bold;
 }
 
+.categories_post {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding: 0.2em 0.5em;
+    font-size: 0.5em;
+    border: 2px solid #1d2f5f;
+    border-radius: 100vh;
+    transition: 0.8s;
+}
+
+.categories_post:hover {
+    background: #1d2f5f;
+    color: #f4f5f7;
+    cursor: pointer;
+}
+
 .date_post {
     margin-top: 1em;
     font-size: 0.5em;
@@ -25,7 +41,6 @@
 
 .content_post {
     width: 60%;
-    // margin: 0 auto;
     margin-left: 3em;
 }
 
@@ -51,7 +66,7 @@
     }
 
     p {
-        font-size: 0.7em;
+        font-size: 0.6em;
         width: 90%;
         margin: 0 0 0.8em 1em;
 
@@ -70,6 +85,7 @@
     }
 
     li {
+        font-size: 0.8em;
         padding-bottom: 0.1em;
         margin-left: 1em;
         margin-bottom: 0.3em;
@@ -98,6 +114,10 @@
 
     .title_post {
         font-size: 0.6em;
+    }
+
+    .categories_post {
+        font-size: 0.3em;
     }
 
     .date_post {

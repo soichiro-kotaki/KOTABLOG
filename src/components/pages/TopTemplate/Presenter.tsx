@@ -48,7 +48,6 @@ export const Presenter: React.FC<Props> = (props) => {
             <main className={styles.main}>
                 <div className={styles.top}>
                     <div className={styles.top_img}></div>
-                    <h2 className={styles.top_description}>Be enthusiastic.</h2>
                     <h2 className={styles.top_sub_description}>
                         #UX #education #programming
                     </h2>
