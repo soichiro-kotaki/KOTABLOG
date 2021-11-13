@@ -2,6 +2,7 @@ import React from "react";
 
 // モジュール
 import { client } from "../../lib/client";
+import cheerio from "cheerio";
 
 // コンポーネント
 import { PostPageTemplate } from "../../components/pages/PostPageTemplate";
@@ -22,7 +23,10 @@ type Props = {
         title: string;
         date: string;
         body: string;
-        categories: [];
+        category: {
+            id: string;
+            name: string;
+        };
     };
 };
 
@@ -43,7 +47,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    // params.id を使用して、ブログの投稿記事に必要なデータを取得する
+    // params.id を使用して、投稿記事ページのレンダリングに必要なデータを取得する
     const postID = params.id;
 
     const postData = await client.get({ endpoint: `posts/${postID}` });

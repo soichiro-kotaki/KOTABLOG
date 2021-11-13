@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 // コンポーネント
@@ -23,13 +24,16 @@ type Props = {
         title: string;
         date: string;
         body: string;
-        categories: [];
+        category: {
+            id: string;
+            name: string;
+        };
     };
 };
 
 export const Presenter: React.FC<Props> = (props) => {
     const { postData } = props;
-    console.log(postData);
+    // console.log(postData);
 
     return (
         <BaseLayout>
@@ -43,8 +47,14 @@ export const Presenter: React.FC<Props> = (props) => {
                         />
                     </div>
                     <h1 className={styles.title_post}>{postData.title}</h1>
+                    <div className={styles.categories_post}>
+                        <Link href={`/categories/${postData.category.id}`}>
+                            {postData.category.name}
+                        </Link>
+                    </div>
                     <p className={styles.date_post}>
-                        投稿日: <Date dateString={postData.date} />{" "}
+                        投稿日: <Date dateString={postData.date} /> 更新日:{" "}
+                        <Date dateString={postData.updatedAt} />
                     </p>
                     <div
                         dangerouslySetInnerHTML={{
