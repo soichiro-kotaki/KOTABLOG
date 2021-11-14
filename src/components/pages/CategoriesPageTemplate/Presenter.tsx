@@ -51,7 +51,7 @@ export const Presenter: React.FC<Props> = (props) => {
                             </span>
                         );
                     })}
-                    』カテゴリーの記事一覧
+                    』の記事一覧
                 </h1>
                 <div className={styles.blog_items__list}>
                     {postData.contents.map((content) => {

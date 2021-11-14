@@ -53,7 +53,7 @@ export const Presenter: React.FC<Props> = (props) => {
                         </Link>
                     </div>
                     <p className={styles.date_post}>
-                        投稿日: <Date dateString={postData.date} /> 更新日:{" "}
+                        投稿日： <Date dateString={postData.date} /> 更新日：
                         <Date dateString={postData.updatedAt} />
                     </p>
                     <div
