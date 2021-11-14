@@ -28,6 +28,18 @@ type Props = {
             id: string;
             name: string;
         };
+        author: {
+            id: string;
+            name: string;
+            englishName: string;
+            img: {
+                url: string;
+                width: number;
+                height: number;
+            };
+            position: string;
+            description: string;
+        };
     };
 };
 
@@ -63,6 +75,34 @@ export const Presenter: React.FC<Props> = (props) => {
                         className={styles.text_post}
                     />
                 </div>
+                <aside className={styles.nav}>
+                    <h1 className={styles.author_title}>著者プロフィール</h1>
+                    <div className={styles.author_img}>
+                        <Image
+                            src={postData.author.img.url}
+                            width={120}
+                            height={120}
+                            objectFit={"cover"}
+                            className={styles.img}
+                        ></Image>
+                    </div>
+                    <p className={styles.author_name}>{postData.author.name}</p>
+                    <p className={styles.author_text}>
+                        {postData.author.englishName}
+                    </p>
+                    <p className={styles.author_text}>
+                        {postData.author.position}
+                    </p>
+                    <p className={styles.author_text}>
+                        {postData.author.description}
+                    </p>
+                    <a
+                        href="https://github.com/soichiro-kotaki"
+                        className={styles.author_link__github}
+                    >
+                        GitHubはこちら
+                    </a>
+                </aside>
             </article>
         </BaseLayout>
     );

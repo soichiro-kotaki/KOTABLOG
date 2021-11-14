@@ -5,6 +5,7 @@
     background: #f4f5f7;
     height: 100%;
     margin: 101px auto 0;
+    display: flex;
 }
 
 .title_post {
@@ -107,9 +108,59 @@
     }
 }
 
+.nav {
+    flex: 1;
+    margin: 1.3em 3em 2em 1.3em;
+    padding: 1em 0.5em;
+    border: 1px solid #dddcda;
+    border-bottom: 5px solid #1c273e;
+    height: 480px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.author_title {
+    font-size: 0.4em;
+    margin-bottom: 1em;
+    font-weight: bold;
+}
+
+.author_img {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.img {
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.author_name {
+    font-weight: bold;
+    border-top: 2px solid #1c273e;
+    font-size: 0.5em;
+    padding-top: 1em;
+}
+
+.author_text {
+    font-size: 0.4em;
+    margin-bottom: 0.5em;
+}
+
+.author_link__github {
+    font-size: 0.4em;
+    font-weight: bold;
+
+    &:hover {
+        filter: brightness(200%);
+        text-decoration: underline;
+    }
+}
+
 @media (max-width: 480px) {
     .container_post {
         margin: 61px auto 0;
+        flex-direction: column;
     }
 
     .title_post {
@@ -140,5 +191,10 @@
         a {
             width: 60%;
         }
+    }
+
+    .nav {
+        margin: 1em auto 1em;
+        width: 90%;
     }
 }
