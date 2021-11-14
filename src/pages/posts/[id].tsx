@@ -27,11 +27,24 @@ type Props = {
             id: string;
             name: string;
         };
+        author: {
+            id: string;
+            name: string;
+            englishName: string;
+            img: {
+                url: string;
+                width: number;
+                height: number;
+            };
+            position: string;
+            description: string;
+        };
     };
 };
 
 const post: React.FC<Props> = (props) => {
     const { postData } = props;
+    console.log(postData);
 
     return <PostPageTemplate postData={postData} />;
 };

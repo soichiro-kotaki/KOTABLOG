@@ -21,6 +21,18 @@ type Props = {
             id: string;
             name: string;
         };
+        author: {
+            id: string;
+            name: string;
+            englishName: string;
+            img: {
+                url: string;
+                width: number;
+                height: number;
+            };
+            position: string;
+            description: string;
+        };
     };
 };
 
