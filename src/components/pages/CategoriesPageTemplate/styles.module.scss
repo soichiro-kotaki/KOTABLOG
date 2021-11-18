@@ -27,14 +27,19 @@
 
             &:hover {
                 cursor: pointer;
+
+                .blog_item__title {
+                    color: #1d2f5f;
+                    filter: brightness(250%);
+                    transition: 0.3s;
+                }
             }
 
             .blog_item__img {
-                transition-duration: 0.5s;
+                transition: 0.3s;
 
                 &:hover {
-                    transform: scale(1.04);
-                    opacity: 0.7;
+                    filter: brightness(80%);
                 }
             }
 
