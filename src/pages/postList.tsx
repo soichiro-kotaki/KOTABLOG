@@ -1,31 +1,17 @@
 import React from "react";
-import { GetStaticProps } from "next";
 
 // モジュール
+import { GetStaticProps } from "next";
 import { client } from "../lib/client";
 
 // コンポーネント
 import { PostListTemplate } from "../components/pages/PostListTemplate";
 
+// データ型
+import { AllPostDataType } from "../types/Post/AllPost";
+
 type Props = {
-    allPostsData: [
-        {
-            id: string;
-            createdAt: string;
-            updatedAt: string;
-            publishedAt: string;
-            revisedAt: string;
-            img: {
-                url: string;
-                height: string;
-                width: string;
-            };
-            title: string;
-            date: string;
-            body: string;
-            categories: [];
-        }
-    ];
+    allPostsData: AllPostDataType[];
     totalCount: number;
 };
 

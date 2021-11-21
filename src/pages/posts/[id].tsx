@@ -8,38 +8,11 @@ import cheerio from "cheerio";
 import { PostPageTemplate } from "../../components/pages/PostPageTemplate";
 import { GetStaticPaths, GetStaticProps } from "next";
 
+// データ型
+import { PostDataType } from "../../types/Post/Post";
+
 type Props = {
-    postData: {
-        id: string;
-        createdAt: string;
-        updatedAt: string;
-        publishedAt: string;
-        revisedAt: string;
-        img: {
-            url: string;
-            height: string;
-            width: string;
-        };
-        title: string;
-        date: string;
-        body: string;
-        category: {
-            id: string;
-            name: string;
-        };
-        author: {
-            id: string;
-            name: string;
-            englishName: string;
-            img: {
-                url: string;
-                width: number;
-                height: number;
-            };
-            position: string;
-            description: string;
-        };
-    };
+    postData: PostDataType;
 };
 
 const post: React.FC<Props> = (props) => {

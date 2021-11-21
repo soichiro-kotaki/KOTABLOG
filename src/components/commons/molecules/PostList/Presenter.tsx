@@ -1,31 +1,22 @@
 import React from "react";
-import styles from "./styles.module.scss";
+
+// コンポーネント
 import { PostItem } from "../../atoms/PostItem";
 
+// スタイリング
+import styles from "./styles.module.scss";
+
+// データ型
+import { AllPostDataType } from "../../../../types/Post/AllPost";
+
 type Props = {
-    allPostsData: [
-        {
-            id: string;
-            createdAt: string;
-            updatedAt: string;
-            publishedAt: string;
-            revisedAt: string;
-            img: {
-                url: string;
-                height: string;
-                width: string;
-            };
-            title: string;
-            date: string;
-            body: string;
-            categories: [];
-        }
-    ];
+    allPostsData: AllPostDataType[];
     totalCount: number;
 };
 
 export const Presenter: React.FC<Props> = (props) => {
     const { allPostsData, totalCount } = props;
+    console.log(props);
     return (
         <ul className={styles.post_list}>
             <PostItem allPostsData={allPostsData} totalCount={totalCount} />

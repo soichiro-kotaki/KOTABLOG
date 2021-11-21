@@ -1,25 +1,12 @@
 import React from "react";
+
 import { Presenter } from "./Presenter";
 
+// データ型
+import { AllPostDataType } from "../../../../types/Post/AllPost";
+
 type Props = {
-    allPostsData: [
-        {
-            id: string;
-            createdAt: string;
-            updatedAt: string;
-            publishedAt: string;
-            revisedAt: string;
-            img: {
-                url: string;
-                height: string;
-                width: string;
-            };
-            title: string;
-            date: string;
-            body: string;
-            categories: [];
-        }
-    ];
+    allPostsData: AllPostDataType[];
     totalCount: number;
 };
 

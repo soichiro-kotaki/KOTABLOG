@@ -9,38 +9,11 @@ import { Date } from "../../commons/atoms/Date";
 // スタイリング
 import styles from "./styles.module.scss";
 
+// データ型
+import { PostDataType } from "../../../types/Post/Post";
+
 type Props = {
-    postData: {
-        id: string;
-        createdAt: string;
-        updatedAt: string;
-        publishedAt: string;
-        revisedAt: string;
-        img: {
-            url: string;
-            height: string;
-            width: string;
-        };
-        title: string;
-        date: string;
-        body: string;
-        category: {
-            id: string;
-            name: string;
-        };
-        author: {
-            id: string;
-            name: string;
-            englishName: string;
-            img: {
-                url: string;
-                width: number;
-                height: number;
-            };
-            position: string;
-            description: string;
-        };
-    };
+    postData: PostDataType;
 };
 
 export const Presenter: React.FC<Props> = (props) => {
