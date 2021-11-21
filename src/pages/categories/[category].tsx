@@ -5,6 +5,8 @@ import { client } from "../../lib/client";
 
 // コンポーネント
 import { CategoriesPageTemplate } from "../../components/pages/CategoriesPageTemplate";
+
+// データ型
 import { GetStaticPaths, GetStaticProps } from "next";
 
 type Props = {
