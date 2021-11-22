@@ -2,6 +2,10 @@ import React from "react";
 
 import { Presenter } from "./Presenter";
 
+// データ型
+import { ImageType } from "../../../types/Image";
+import { CategoriesType } from "../../../types/Categories";
+
 type Props = {
     postData: {
         contents: [
@@ -11,25 +15,19 @@ type Props = {
                 updatedAt: string;
                 publishedAt: string;
                 revisedAt: string;
-                img: {
-                    url: string;
-                    height: string;
-                    width: string;
-                };
+                img: ImageType;
                 title: string;
                 date: string;
                 body: string;
-                category: {
-                    id: string;
-                    name: string;
-                };
+                category: CategoriesType[];
             }
         ];
     };
+    categoryId: string;
 };
 
 export const CategoriesPageTemplate: React.FC<Props> = (props) => {
-    const { postData } = props;
+    const { postData, categoryId } = props;
 
-    return <Presenter postData={postData} />;
+    return <Presenter postData={postData} categoryId={categoryId} />;
 };
