@@ -11,5 +11,5 @@ export type AllPostDataType = {
     title: string;
     date: string;
     body: string;
-    categories: CategoriesType;
+    categories: CategoriesType[];
 };
