@@ -10,6 +10,7 @@ type Props = {
 
 export const Presenter: React.FC<Props> = (props) => {
     const { handleOpenMenuModal } = props;
+
     return (
         <header className={styles.menu}>
             <img src="/logo.png" className={styles.logo} />

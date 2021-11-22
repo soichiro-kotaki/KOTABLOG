@@ -16,7 +16,7 @@ type Props = {
 
 export const Presenter: React.FC<Props> = (props) => {
     const { allPostsData, totalCount } = props;
-    console.log(props);
+
     return (
         <ul className={styles.post_list}>
             <PostItem allPostsData={allPostsData} totalCount={totalCount} />
