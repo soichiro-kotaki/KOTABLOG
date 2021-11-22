@@ -10,16 +10,17 @@ import { GetStaticPaths, GetStaticProps } from "next";
 
 // データ型
 import { PostDataType } from "../../types/Post/Post";
+import { CategoriesType } from "../../types/Categories";
 
 type Props = {
     postData: PostDataType;
+    result: CategoriesType[];
 };
 
 const post: React.FC<Props> = (props) => {
-    const { postData } = props;
-    console.log(postData);
+    const { postData, result } = props;
 
-    return <PostPageTemplate postData={postData} />;
+    return <PostPageTemplate postData={postData} result={result} />;
 };
 export default post;
 
@@ -38,9 +39,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const postData = await client.get({ endpoint: `posts/${postID}` });
 
+    const result = await client.get({
+        endpoint: "categories",
+        queries: { fields: "id,name" },
+    });
+
     return {
         props: {
             postData,
+            result: result.contents,
         },
     };
 };

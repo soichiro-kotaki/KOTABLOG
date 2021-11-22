@@ -12,6 +12,6 @@ export type PostDataType = {
     title: string;
     date: string;
     body: string;
-    category: CategoriesType;
+    category: CategoriesType[];
     author: AuthorType;
 };
