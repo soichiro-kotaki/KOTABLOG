@@ -40,7 +40,7 @@ export const Presenter: React.FC<Props> = (props) => {
                     </Link>
                 </li>
                 <li className={styles.link}>
-                    <Link href="postList">
+                    <Link href="/postList">
                         <span className={styles.subtitle}>News</span>
                     </Link>
                 </li>
