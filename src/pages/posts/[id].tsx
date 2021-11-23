@@ -6,9 +6,9 @@ import cheerio from "cheerio";
 
 // コンポーネント
 import { PostPageTemplate } from "../../components/pages/PostPageTemplate";
-import { GetStaticPaths, GetStaticProps } from "next";
 
 // データ型
+import { GetStaticPaths, GetStaticProps } from "next";
 import { PostDataType } from "../../types/Post/Post";
 import { CategoriesType } from "../../types/Categories";
 

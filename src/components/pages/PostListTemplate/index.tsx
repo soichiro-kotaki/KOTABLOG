@@ -3,10 +3,26 @@ import React from "react";
 import { Presenter } from "./Presenter";
 
 // データ型
-import { AllPostDataType } from "../../../types/Post/AllPost";
+import { ImageType } from "../../../types/Image";
+import { CategoriesType } from "../../../types/Categories";
 
 type Props = {
-    allPostsData: AllPostDataType[];
+    allPostsData: {
+        contents: [
+            {
+                id: string;
+                createdAt: string;
+                updatedAt: string;
+                publishedAt: string;
+                revisedAt: string;
+                img: ImageType;
+                title: string;
+                date: string;
+                body: string;
+                category: CategoriesType[];
+            }
+        ];
+    };
     totalCount: number;
 };
 
