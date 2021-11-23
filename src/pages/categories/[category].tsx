@@ -63,7 +63,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     // 各カテゴリのーページの一意タイトルテキストを抜き出すために、paramsで渡ってきたひとつのカテゴリーIDと一致するカテゴリーを抽出し、さらにそこからnameを抜き出す。
     const categoryId = postData.contents[0].category.filter(
-        (element) => element.id === postID.category
+        (element: any) => element.id === postID.category
     );
 
     return {
