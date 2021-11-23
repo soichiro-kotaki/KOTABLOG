@@ -37,7 +37,10 @@ export const Presenter: React.FC<Props> = (props) => {
                     {/* <div className={styles.categories_post}> */}
                     {postData.category.map((category) => {
                         return (
-                            <div className={styles.categories_post}>
+                            <div
+                                className={styles.categories_post}
+                                key={category.id}
+                            >
                                 <Link href={`/categories/${category.id}`}>
                                     {category.name}
                                 </Link>
