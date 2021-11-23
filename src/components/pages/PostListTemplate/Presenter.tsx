@@ -2,17 +2,32 @@ import React from "react";
 
 // コンポーネント
 import { BaseLayout } from "../../layouts/BaseLayout";
-import { PostList } from "../../commons/molecules/PostList";
-import { Title } from "../../commons/atoms/Title";
+import { BlogItem } from "../../commons/molecules/BlogItem";
 
 // スタイリング
 import styles from "./styles.module.scss";
 
 // データ型
-import { AllPostDataType } from "../../../types/Post/AllPost";
+import { ImageType } from "../../../types/Image";
+import { CategoriesType } from "../../../types/Categories";
 
 type Props = {
-    allPostsData: AllPostDataType[];
+    allPostsData: {
+        contents: [
+            {
+                id: string;
+                createdAt: string;
+                updatedAt: string;
+                publishedAt: string;
+                revisedAt: string;
+                img: ImageType;
+                title: string;
+                date: string;
+                body: string;
+                category: CategoriesType[];
+            }
+        ];
+    };
     totalCount: number;
 };
 
@@ -22,8 +37,12 @@ export const Presenter: React.FC<Props> = (props) => {
     return (
         <BaseLayout>
             <div className={styles.container}>
-                <Title title="News" subtitle="投稿記事一覧" />
-                <PostList allPostsData={allPostsData} totalCount={totalCount} />
+                <h1
+                    className={styles.title}
+                >{`投稿記事一覧 (全${totalCount}件)`}</h1>
+                <div className={styles.postlist}>
+                    <BlogItem postData={allPostsData} />
+                </div>
             </div>
         </BaseLayout>
     );

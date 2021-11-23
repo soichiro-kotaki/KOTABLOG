@@ -1,5 +1,4 @@
 import React from "react";
-import { GetStaticProps } from "next";
 
 // モジュール
 import { client } from "../lib/client";
@@ -8,6 +7,7 @@ import { client } from "../lib/client";
 import { TopTemplate } from "../components/pages/TopTemplate";
 
 // データ型
+import { GetStaticProps } from "next";
 import { AllPostDataType } from "../types/Post/AllPost";
 
 type Props = {

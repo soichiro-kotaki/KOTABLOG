@@ -1,17 +1,33 @@
 import React from "react";
 
 // モジュール
-import { GetStaticProps } from "next";
 import { client } from "../lib/client";
 
 // コンポーネント
 import { PostListTemplate } from "../components/pages/PostListTemplate";
 
 // データ型
-import { AllPostDataType } from "../types/Post/AllPost";
+import { GetStaticProps } from "next";
+import { ImageType } from "../types/Image";
+import { CategoriesType } from "../types/Categories";
 
 type Props = {
-    allPostsData: AllPostDataType[];
+    allPostsData: {
+        contents: [
+            {
+                id: string;
+                createdAt: string;
+                updatedAt: string;
+                publishedAt: string;
+                revisedAt: string;
+                img: ImageType;
+                title: string;
+                date: string;
+                body: string;
+                category: CategoriesType[];
+            }
+        ];
+    };
     totalCount: number;
 };
 
@@ -28,7 +44,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
     return {
         props: {
-            allPostsData: data.contents,
+            allPostsData: data,
             totalCount: data.totalCount,
         },
     };
