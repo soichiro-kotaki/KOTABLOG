@@ -8,6 +8,10 @@
     display: flex;
 }
 
+.img_post {
+    margin: 1.5em auto 0;
+}
+
 .title_post {
     font-size: 1.1em;
     margin: 0 auto;
@@ -45,10 +49,6 @@
 .content_post {
     width: 60%;
     margin-left: 3em;
-}
-
-.img_post {
-    margin: 1.3em auto 0;
 }
 
 .text_post {
@@ -110,88 +110,12 @@
     }
 }
 
-.nav {
+.aside {
     flex: 1;
-    margin: 1.3em 3em 2em 1.3em;
-    padding: 1em 0.5em;
-    border: 1px solid #dddcda;
-    border-bottom: 5px solid #1c273e;
-    height: 480px;
-    border-radius: 10px;
-    background: #fff;
-}
+    margin: 1.5em 3em 2em 1.3em;
 
-.author_title {
-    font-size: 0.4em;
-    margin-bottom: 1em;
-    font-weight: bold;
-}
-
-.author_img {
-    margin: 0 auto;
-    text-align: center;
-}
-
-.img {
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.author_name {
-    font-weight: bold;
-    border-top: 2px solid #1c273e;
-    font-size: 0.5em;
-    padding-top: 1em;
-}
-
-.author_text {
-    font-size: 0.4em;
-    margin-bottom: 0.5em;
-}
-
-.author_link__github {
-    font-size: 0.4em;
-    font-weight: bold;
-
-    &:hover {
-        filter: brightness(200%);
-        text-decoration: underline;
-    }
-}
-
-.categories {
-    margin-top: 4em;
-    font-size: 0.5em;
-    border: 1px solid #dddcda;
-    border-bottom: 5px solid #1c273e;
-    border-radius: 10px;
-    background: #fff;
-    padding: 1em;
-
-    .categories_title {
-        font-weight: bold;
-        font-size: 0.8em;
-        margin-bottom: 1em;
-    }
-
-    .categories_link {
-        display: inline-block;
-        margin: 0 auto;
-        color: #f4f5f7;
-        border-radius: 100vh;
-        text-align: center;
-        background: #778beb;
-        margin-right: 0.5em;
-        margin-bottom: 1em;
-        padding: 0.3em 0.5em;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        transition: 0.3s;
-
-        &:hover {
-            cursor: pointer;
-            color: #778beb;
-            background: #fff;
-        }
+    .categories_wrapper {
+        margin-top: 1.5em;
     }
 }
 
@@ -231,7 +155,7 @@
         }
     }
 
-    .nav {
+    .aside {
         margin: 1em auto 1em;
         width: 90%;
     }
