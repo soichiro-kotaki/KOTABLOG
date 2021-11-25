@@ -1,0 +1,40 @@
+.categories {
+    font-size: 0.5em;
+    border: 1px solid #dddcda;
+    border-bottom: 5px solid #1c273e;
+    border-radius: 10px;
+    background: #fff;
+    padding: 1em;
+
+    .categories_title {
+        font-weight: bold;
+        font-size: 0.8em;
+        margin-bottom: 1em;
+    }
+
+    .categories_link {
+        display: inline-block;
+        margin: 0 auto;
+        color: #f4f5f7;
+        border-radius: 100vh;
+        text-align: center;
+        background: #778beb;
+        margin-right: 0.5em;
+        margin-bottom: 1em;
+        padding: 0.3em 0.5em;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        transition: 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            color: #778beb;
+            background: #fff;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .categories_link {
+        font-size: 0.8em;
+    }
+}

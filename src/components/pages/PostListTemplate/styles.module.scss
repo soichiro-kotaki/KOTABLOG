@@ -2,12 +2,42 @@
     width: 100%;
     color: #333;
     background: #f4f5f7;
-    height: 100vh;
     padding-top: 101px;
+
+    .title {
+        text-align: center;
+        font-size: 1.5em;
+        width: 85%;
+        border-bottom: 2px solid #dddcda;
+        margin: 0 auto;
+        padding-bottom: 0.5em;
+        margin-top: 2em;
+    }
+
+    .postlist {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        font-size: 2em;
+        margin-top: 2em;
+        margin-bottom: 3em;
+        width: 85%;
+    }
 }
 
 @media (max-width: 480px) {
     .container {
         padding-top: 61px;
+
+        .title {
+            font-size: 1em;
+        }
+
+        .postlist {
+            flex-direction: column;
+            gap: 50px;
+            margin-top: 1em;
+        }
     }
 }

@@ -1,8 +1,6 @@
 .link {
     height: 98px;
     border-top: 1px solid #dddcda;
-    //member部分のボタンのスタイル
-    // margin-top: 80px;
     text-align: center;
 }
 
@@ -16,6 +14,7 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     align-items: center;
     width: 140px;
+    transition: 0.8s;
 }
 
 .btn:hover {
@@ -33,6 +32,7 @@
     border-right: 3px solid #f4f5f7;
     transform: rotate(45deg);
     margin-left: 0.7em;
+    transition: 0.8s;
 }
 
 .btn:hover::after {
@@ -41,13 +41,6 @@
 }
 
 @media (max-width: 480px) {
-    // .link {
-    //     margin-top: 10px;
-    // }
-
-    // .btn {
-    //     margin: 10% auto 0;
-    // }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
