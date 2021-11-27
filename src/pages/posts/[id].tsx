@@ -2,7 +2,6 @@ import React from "react";
 
 // モジュール
 import { client } from "../../lib/client";
-import cheerio from "cheerio";
 
 // コンポーネント
 import { PostPageTemplate } from "../../components/pages/PostPageTemplate";

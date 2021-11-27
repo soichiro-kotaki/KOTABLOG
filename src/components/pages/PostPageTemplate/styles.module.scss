@@ -9,13 +9,17 @@
 }
 
 .img_post {
-    margin: 1.5em auto 0;
+    margin: 0 auto;
+
+    .img {
+        border-radius: 10px;
+    }
 }
 
 .title_post {
     font-size: 1.1em;
     margin: 0 auto;
-    padding-left: 0.4em;
+    padding-left: 0.3em;
     color: #333;
     font-weight: bold;
 }
@@ -24,6 +28,7 @@
     display: inline-block;
     margin-top: 0.5em;
     margin-right: 0.5em;
+    margin-left: 0.5em;
     padding: 0.1em 0.5em;
     font-size: 0.5em;
     border: 2px solid #778beb;
@@ -39,9 +44,9 @@
 }
 
 .date_post {
-    margin-top: 1em;
+    margin: 1em auto 0;
+    width: 95%;
     font-size: 0.5em;
-    padding-left: 1em;
     padding-bottom: 0.3em;
     border-bottom: 1px solid #dddcda;
 }
@@ -49,23 +54,29 @@
 .content_post {
     width: 60%;
     margin-left: 3em;
+    background: #fff;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    border-radius: 10px;
+    border: 1px solid #dddcda;
 }
 
 .text_post {
     font-size: 0.8em;
     margin-top: 1em;
+    padding-left: 0;
 
     h1 {
-        background: #1d2f5f;
-        font-size: 1em;
-        color: #f4f5f7;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        padding-left: 0.5em;
+        font-size: 1.2em;
+        color: #333;
+        font-weight: bold;
+        border-bottom: 1.5px solid #778beb;
         padding-top: 0.3em;
         padding-bottom: 0.3em;
+        width: 95%;
+        margin: 0 auto;
         margin-top: 2.5em;
         margin-bottom: 1.2em;
-        border-radius: 5px;
     }
 
     p {
@@ -80,7 +91,7 @@
 
     h2 {
         font-size: 0.9em;
-        margin-left: 0.3em;
+        margin-left: 0.6em;
     }
 
     strong {
@@ -90,7 +101,7 @@
     li {
         font-size: 0.8em;
         padding-bottom: 0.1em;
-        margin-left: 1em;
+        margin-left: 1.5em;
         margin-bottom: 0.3em;
         list-style: square inside;
     }
@@ -135,12 +146,12 @@
 
     .date_post {
         font-size: 0.3em;
-        padding-left: 1em;
     }
 
     .content_post {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
+        border-radius: 10px 10px 0 0;
     }
 
     .text_post {
