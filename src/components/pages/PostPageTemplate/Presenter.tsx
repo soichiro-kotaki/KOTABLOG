@@ -32,6 +32,7 @@ export const Presenter: React.FC<Props> = (props) => {
                             src={postData.img.url}
                             width={900}
                             height={450}
+                            className={styles.img}
                         />
                     </div>
                     <h1 className={styles.title_post}>{postData.title}</h1>
