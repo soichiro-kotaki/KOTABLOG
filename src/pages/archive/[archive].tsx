@@ -21,7 +21,6 @@ type Props = {
                 publishedAt: string;
                 revisedAt: string;
                 img: ImageType;
-                1;
                 title: string;
                 date: string;
                 body: string;
