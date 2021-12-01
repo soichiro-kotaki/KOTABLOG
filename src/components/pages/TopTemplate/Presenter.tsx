@@ -43,7 +43,10 @@ export const Presenter: React.FC<Props> = (props) => {
     const { allPostsData, result, totalCount } = props;
 
     return (
-        <BaseLayout>
+        <BaseLayout
+            title="KOTABLOG ~大学生の技術ブログ~
+        "
+        >
             <div className={styles.container}>
                 <main className={styles.main}>
                     <h1 className={styles.post_title}>最新の記事一覧</h1>

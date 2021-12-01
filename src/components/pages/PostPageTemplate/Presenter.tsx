@@ -24,7 +24,7 @@ export const Presenter: React.FC<Props> = (props) => {
     const { postData, result } = props;
 
     return (
-        <BaseLayout>
+        <BaseLayout title={postData.title}>
             <article className={styles.container_post}>
                 <div className={styles.content_post}>
                     <div className={styles.img_post}>
