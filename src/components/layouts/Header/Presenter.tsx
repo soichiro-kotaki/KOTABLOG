@@ -13,51 +13,42 @@ export const Presenter: React.FC<Props> = (props) => {
 
     return (
         <header className={styles.menu}>
-            <img src="/logo.png" className={styles.logo} />
+            <img src="/KOTABLOG-logo.png" className={styles.logo} />
             <Link href="/">
                 <h1 className={styles.seminar}>
-                    <span className={styles.seminar_name}>長野県立大学 </span>{" "}
-                    <span className={styles.seminar_name}>グローバル教養 </span>{" "}
-                    <span className={styles.seminar_name}>萱津ゼミ</span>
+                    <span className={styles.seminar_name}>KOTABLOG </span>{" "}
+                    <span className={styles.seminar_name}>~大学生の </span>{" "}
+                    <span className={styles.seminar_name}>技術ブログ~</span>
                 </h1>
             </Link>
             <ul className={styles.nav}>
                 <li className={styles.link}>
                     <Link href="/">
-                        {/* <span className={styles.subtitle}>News</span>新着情報 */}
-                        <a>Home</a>
+                        <a>ホーム</a>
                     </Link>
                 </li>
                 <li className={styles.link}>
                     <Link href="/postList">
-                        {/* <span className={styles.subtitle}>News</span>新着情報 */}
-                        <a>News</a>
+                        <a>記事一覧</a>
                     </Link>
                 </li>
                 <li className={styles.link}>
                     <Link href="/about">
-                        {/* <span className={styles.subtitle}>About</span>研究紹介 */}
-                        <a>About</a>
+                        <a>このブログについて</a>
                     </Link>
                 </li>
                 <li className={styles.link}>
                     <Link href="/member">
-                        {/* <span className={styles.subtitle}>Member</span>
-                        教員と学生
-                     */}
-                        <a>Member</a>
+                        <a>プロフィール</a>
                     </Link>
                 </li>
-                <li className={styles.link}>
+                {/* <li className={styles.link}>
                     <Link href="/contact">
-                        {/* <span className={styles.subtitle}>Contact</span>
-                        お問い合わせ */}
-                        <a>Contact</a>
+                        <a>お問い合わせ</a>
                     </Link>
-                </li>
+                </li> */}
             </ul>
 
-            {/* Hamburger menu for smartphone */}
             <div className={styles.menubar} onClick={handleOpenMenuModal}>
                 <img src="/menu.png" />
             </div>

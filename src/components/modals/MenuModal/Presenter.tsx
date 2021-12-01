@@ -33,34 +33,36 @@ export const Presenter: React.FC<Props> = (props) => {
             closeTimeoutMS={500}
         >
             <ul className={styles.nav}>
-                <li className={styles.title}>Menu</li>
+                <li className={styles.title}>メニュー</li>
                 <li className={styles.link}>
                     <Link href="/">
-                        <span className={styles.subtitle}>Home</span>
+                        <span className={styles.subtitle}>ホーム</span>
                     </Link>
                 </li>
                 <li className={styles.link}>
                     <Link href="/postList">
-                        <span className={styles.subtitle}>News</span>
+                        <span className={styles.subtitle}>記事一覧</span>
                     </Link>
                 </li>
                 <li className={styles.link}>
                     <Link href="/about">
-                        <span className={styles.subtitle}>About</span>
+                        <span className={styles.subtitle}>
+                            このブログについて
+                        </span>
                     </Link>
                 </li>
                 <li className={styles.link}>
                     <Link href="/member">
-                        <span className={styles.subtitle}>Member</span>
+                        <span className={styles.subtitle}>プロフィール</span>
                     </Link>
                 </li>
-                <li className={styles.link}>
+                {/* <li className={styles.link}>
                     <Link href="/contact">
                         <span className={styles.subtitle}>Contact</span>
                     </Link>
-                </li>
+                </li> */}
                 <p className={styles.close} onClick={handleCloseMenuModal}>
-                    Close
+                    閉じる
                 </p>
             </ul>
         </Modal>
