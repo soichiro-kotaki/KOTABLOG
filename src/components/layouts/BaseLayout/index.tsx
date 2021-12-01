@@ -3,11 +3,12 @@ import { useState, useCallback } from "react";
 import { Presenter } from "./Presenter";
 
 type Props = {
+    title: string;
     children: React.ReactNode;
 };
 
 export const BaseLayout: React.FC<Props> = (props) => {
-    const { children } = props;
+    const { title, children } = props;
 
     // メニューモーダルのstate
     const [isMenuModalVisible, setIsMenuModalVisible] = useState(false);
@@ -24,6 +25,7 @@ export const BaseLayout: React.FC<Props> = (props) => {
 
     return (
         <Presenter
+            title={title}
             children={children}
             handleOpenMenuModal={handleOpenMenuModal}
             handleCloseMenuModal={handleCloseMenuModal}

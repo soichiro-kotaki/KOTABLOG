@@ -36,7 +36,7 @@ export const Presenter: React.FC<Props> = (props) => {
     const { postData, archiveDate } = props;
 
     return (
-        <BaseLayout>
+        <BaseLayout title={`『${archiveDate.replace("-", "年")}月』の記事一覧`}>
             <div className={styles.container_archives}>
                 <div className={styles.blog_archives}>
                     <ArchiveDate archiveDate={archiveDate} />

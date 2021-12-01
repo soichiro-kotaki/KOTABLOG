@@ -38,7 +38,7 @@ export const Presenter: React.FC<Props> = (props) => {
     const { postData, categoryId } = props;
 
     return (
-        <BaseLayout>
+        <BaseLayout title={`『${categoryId}』の記事一覧`}>
             <div className={styles.container_categories}>
                 <h1 className={styles.blog_categories}>
                     『{categoryId}

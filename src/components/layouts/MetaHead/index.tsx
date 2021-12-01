@@ -2,6 +2,12 @@ import React from "react";
 
 import { Presenter } from "./Presenter";
 
-export const MetaHead: React.FC = () => {
-    return <Presenter />;
+type Props = {
+    title: string;
+};
+
+export const MetaHead: React.FC<Props> = (props) => {
+    const { title } = props;
+
+    return <Presenter title={title} />;
 };

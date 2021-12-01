@@ -11,6 +11,7 @@ import { MenuModal } from "../../modals/MenuModal";
 import styles from "./styles.module.scss";
 
 type Props = {
+    title: string;
     handleOpenMenuModal: () => void;
     handleCloseMenuModal: () => void;
     isMenuModalVisible: boolean;
@@ -19,6 +20,7 @@ type Props = {
 
 export const Presenter: React.FC<Props> = (props) => {
     const {
+        title,
         handleOpenMenuModal,
         children,
         isMenuModalVisible,
@@ -27,7 +29,7 @@ export const Presenter: React.FC<Props> = (props) => {
 
     return (
         <div className={styles.container} id="top">
-            <MetaHead />
+            <MetaHead title={title} />
             <Header handleOpenMenuModal={handleOpenMenuModal} />
             {children}
             <ToTopButton />
