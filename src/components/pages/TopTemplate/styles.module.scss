@@ -1,350 +1,69 @@
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+.container {
+    width: 100%;
+    display: flex;
+    padding-top: 101px;
+    color: #333;
+    background: #f4f5f7;
+    font-size: 2em;
 }
 
 .main {
-    position: relative;
-    width: 100%;
-    padding-top: 88px;
-    z-index: 1;
-    margin: 0 auto;
+    width: 67%;
+    margin-left: 1em;
+    margin-top: 2em;
+
+    .post_title {
+        margin: 0 auto;
+        font-size: 0.8em;
+        text-align: center;
+        margin-bottom: 1em;
+        border-bottom: 2px solid #dddcda;
+        width: 85%;
+    }
+
+    .postlist {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-top: 2em;
+        margin-bottom: 3em;
+    }
+}
+
+.aside {
+    margin: 2em 2em 2em 1em;
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.top {
-    max-width: 100%;
-    justify-content: space-between;
-    position: relative;
-}
-
-.top_img {
-    max-width: 100%;
-    width: 100%;
-    height: 700px;
-    background-image: url("/top.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-}
-
-.top_sub_description {
-    position: absolute;
-    bottom: 30%;
-    right: 0;
-    z-index: 2;
-    font-size: 4rem;
-    color: #dddcda;
-    padding: 1em;
-    font-family: "Caveat", cursive;
-    animation: fadeIn 4s ease-in-out 0s 1 normal;
-}
-
-.post {
-    text-align: center;
-    width: 90%;
-    background: #f4f5f7;
-    height: 600px;
-    margin: 80px auto 0;
-    color: #333;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
-}
-
-.btn_news {
-    display: block;
-    width: 180px;
-    background: #1d2f5f;
-    color: #f4f5f7;
-    padding: 10px 30px;
-    border-radius: 100vh;
-    margin: 250px auto 0;
-    transition: 0.8s;
-}
-
-.btn_news:hover {
-    background: #fff;
-    border: 1px solid #1d2f5f;
-    color: #1d2f5f;
-    cursor: pointer;
-}
-
-.about {
-    margin: 80px auto 0;
-    background: #f4f5f7;
-    width: 100%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-//member部分
-.member {
-    background: #f4f5f7;
-    margin-top: 80px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.member_text {
-    font-size: 24px;
-    margin: 20px auto 20px;
-}
-
-.member_about {
-    display: flex;
-    width: 90%;
-    margin: 40px auto 0;
-    color: #333;
-}
-
-.member_img {
-    display: block;
-    width: 500px;
-    margin-bottom: 30px;
-    box-shadow: 0 0px 3px rgba(0, 0, 0, 0.2);
-}
-
-.description {
-    flex: 1;
-    height: 400px;
-    background: #f4f5f7;
-    margin-left: 100px;
-}
-
-.link_member {
-    height: 98px;
-    text-align: center;
-    margin-top: 80px;
-}
-
-.btn_member {
-    display: flex;
-    color: #fff;
-    margin: 25px auto 0;
-    background: #1d2f5f;
-    padding: 10px 30px;
-    border-radius: 100vh;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    align-items: center;
-    width: 140px;
-    transition: 0.8s;
-}
-
-.btn_member:hover {
-    background: #fff;
-    border: 1px solid #1d2f5f;
-    color: #1d2f5f;
-    cursor: pointer;
-}
-
-.btn_member::after {
-    content: "";
-    width: 9px;
-    height: 9px;
-    border-top: 3px solid #f4f5f7;
-    border-right: 3px solid #f4f5f7;
-    transform: rotate(45deg);
-    margin-left: 0.7em;
-    transition: 0.8s;
-}
-
-.btn_member:hover::after {
-    border-top: 3px solid #1d2f5f;
-    border-right: 3px solid #1d2f5f;
-}
-
-//contact部分
-.contact {
-    background: #f4f5f7;
-    color: #333;
-    width: 100%;
-    margin: 80px auto 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.divider {
-    display: flex;
-    width: 90%;
-    margin: 0 auto;
-}
-
-.address {
-    font-size: 24px;
-    text-align: left;
-}
-
-.address:nth-child(even) {
-    margin-bottom: 40px;
-    padding-left: 1.5em;
-}
-
-.address:nth-child(odd) {
-    font-weight: bold;
-    font-size: 1.5em;
-    padding-left: 0.5em;
-    border-left: 5px solid #1d2f5f;
-    margin-bottom: 10px;
-}
-
-.box__map {
-    width: 600px;
-    height: 400px;
-    margin: 0 auto;
-}
-
-.link_contact {
-    text-align: center;
-    margin: 80px auto;
-    width: 300px;
-}
-
-.btn_contact {
-    display: flex;
-    color: #fff;
-    background: #1d2f5f;
-    padding: 10px 30px;
-    border-radius: 100vh;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    align-items: center;
-    border: 1px solid transparent;
-    transition: 0.8s;
-}
-
-.btn_contact:hover {
-    background: #fff;
-    border: 1px solid #1d2f5f;
-    color: #1d2f5f;
-    cursor: pointer;
-}
-
-.btn_contact::after {
-    content: "";
-    width: 9px;
-    height: 9px;
-    border-top: 3px solid #f4f5f7;
-    border-right: 3px solid #f4f5f7;
-    transform: rotate(45deg);
-    margin-left: 0.7em;
-    transition: 0.8s;
-}
-
-.btn_contact:hover::after {
-    border-top: 3px solid #1d2f5f;
-    border-right: 3px solid #1d2f5f;
+    .categories_wrapper {
+        margin-top: 1.5em;
+    }
 }
 
 // レスポンシブ
-@media (max-width: 360px) {
-    .btn_contact {
-        font-size: 16px;
-    }
-}
-
 @media (max-width: 480px) {
-    @keyframes fadeInFromLeft {
-        0% {
-            left: -50%;
-        }
-
-        75% {
-            left: 35%;
-        }
-
-        100% {
-            left: 25%;
-        }
-    }
-    .main {
+    .container {
+        flex-direction: column;
         padding-top: 61px;
-    }
 
-    .top_img {
-        height: 200px;
-    }
+        .main {
+            width: 85%;
+            margin: 1em auto 0;
 
-    .top_description {
-        font-size: 1.5rem;
-        left: 25%;
-        padding: 1em;
-    }
+            .post_title {
+                font-size: 0.6em;
+                width: 95%;
+            }
 
-    .top_sub_description {
-        font-size: 1em;
-        bottom: 30px;
-    }
+            .postlist {
+                flex-direction: column;
+                gap: 50px;
+                margin-top: 1em;
+            }
+        }
 
-    .post {
-        height: 400px;
-        margin: 0 auto;
-    }
-
-    .btn_news {
-        margin: 50px auto 0;
-    }
-
-    .about {
-        margin-top: 50px;
-    }
-
-    //member部分
-    .member {
-        margin-top: 40px;
-    }
-
-    .member_text {
-        font-size: 16px;
-    }
-    .member_about {
-        flex-direction: column;
-        width: 90%;
-    }
-
-    .member_img {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 0px;
-    }
-
-    .description {
-        margin-left: 0;
-    }
-
-    .link_member {
-        margin-top: 10px;
-    }
-
-    .btn_member {
-        margin: 10% auto 0;
-    }
-
-    //contact部分
-    .contact {
-        margin-top: 40px;
-    }
-
-    .divider {
-        flex-direction: column;
-    }
-
-    .address {
-        font-size: 16px;
-    }
-
-    .address:nth-child(odd) {
-        font-size: 1.2em;
-    }
-
-    .box__map {
-        width: 100%;
-        height: 300px;
-    }
-
-    .link_contact {
-        margin: 50px auto;
+        .aside {
+            margin: 1em auto 1em;
+            width: 90%;
+        }
     }
 }

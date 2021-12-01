@@ -1,5 +1,6 @@
 import { CategoriesType } from "../Categories";
 import { ImageType } from "../Image";
+import { AuthorType } from "../Author";
 
 export type AllPostDataType = {
     id: string;
@@ -12,4 +13,5 @@ export type AllPostDataType = {
     date: string;
     body: string;
     categories: CategoriesType[];
+    author: AuthorType;
 };
