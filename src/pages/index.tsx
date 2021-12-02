@@ -31,17 +31,17 @@ type Props = {
         ];
     };
     result: CategoriesType[];
-    totalCount: number;
+    archivesList: string[];
 };
 
 const Home: React.FC<Props> = (props) => {
-    const { allPostsData, result, totalCount } = props;
+    const { allPostsData, result, archivesList } = props;
 
     return (
         <TopTemplate
             allPostsData={allPostsData}
             result={result}
-            totalCount={totalCount}
+            archivesList={archivesList}
         />
     );
 };
@@ -54,11 +54,23 @@ export const getStaticProps: GetStaticProps = async () => {
         queries: { fields: "id,name" },
     });
 
+    const allDateList = await client.get({
+        endpoint: "posts",
+        queries: { fields: `date` },
+    });
+    const archiveList = allDateList.contents.map((content) => {
+        const extractedDateList = content.date.substr(0, 7);
+
+        return extractedDateList;
+    });
+    const sortedArchiveList = Array.from(new Set(archiveList));
+    console.log(sortedArchiveList);
+
     return {
         props: {
             allPostsData: data,
             result: result.contents,
-            totalCount: data.totalCount,
+            archivesList: sortedArchiveList,
         },
     };
 };

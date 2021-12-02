@@ -1,6 +1,7 @@
 import React from "react";
 
 // コンポーネント
+import { ArchivesCard } from "../../commons/molecules/ArchivesCard";
 import { BaseLayout } from "../../layouts/BaseLayout";
 import { BlogItem } from "../../commons/molecules/BlogItem";
 import { CategoriesCard } from "../../commons/molecules/CategoriesCard";
@@ -36,11 +37,11 @@ type Props = {
         ];
     };
     result: CategoriesType[];
-    totalCount: number;
+    archivesList: string[];
 };
 
 export const Presenter: React.FC<Props> = (props) => {
-    const { allPostsData, result, totalCount } = props;
+    const { allPostsData, result, archivesList } = props;
 
     return (
         <BaseLayout
@@ -60,6 +61,9 @@ export const Presenter: React.FC<Props> = (props) => {
                     />
                     <div className={styles.categories_wrapper}>
                         <CategoriesCard categories={result} />
+                    </div>
+                    <div className={styles.archives_wrapper}>
+                        <ArchivesCard archivesList={archivesList} />
                     </div>
                 </aside>
             </div>

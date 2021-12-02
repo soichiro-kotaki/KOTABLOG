@@ -14,14 +14,16 @@ import styles from "./styles.module.scss";
 // データ型
 import { PostDataType } from "../../../types/Post/Post";
 import { CategoriesType } from "../../../types/Categories";
+import { ArchivesCard } from "../../commons/molecules/ArchivesCard";
 
 type Props = {
     postData: PostDataType;
     result: CategoriesType[];
+    archivesList: string[];
 };
 
 export const Presenter: React.FC<Props> = (props) => {
-    const { postData, result } = props;
+    const { postData, result, archivesList } = props;
 
     return (
         <BaseLayout title={postData.title}>
@@ -63,6 +65,9 @@ export const Presenter: React.FC<Props> = (props) => {
                     <ProfileCard profileData={postData.author} />
                     <div className={styles.categories_wrapper}>
                         <CategoriesCard categories={result} />
+                    </div>
+                    <div className={styles.archives_wrapper}>
+                        <ArchivesCard archivesList={archivesList} />
                     </div>
                 </aside>
             </article>

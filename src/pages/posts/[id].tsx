@@ -14,12 +14,19 @@ import { CategoriesType } from "../../types/Categories";
 type Props = {
     postData: PostDataType;
     result: CategoriesType[];
+    archivesList: string[];
 };
 
 const post: React.FC<Props> = (props) => {
-    const { postData, result } = props;
+    const { postData, result, archivesList } = props;
 
-    return <PostPageTemplate postData={postData} result={result} />;
+    return (
+        <PostPageTemplate
+            postData={postData}
+            result={result}
+            archivesList={archivesList}
+        />
+    );
 };
 export default post;
 
@@ -43,10 +50,22 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         queries: { fields: "id,name" },
     });
 
+    const allDateList = await client.get({
+        endpoint: "posts",
+        queries: { fields: `date` },
+    });
+    const archiveList = allDateList.contents.map((content) => {
+        const extractedDateList = content.date.substr(0, 7);
+
+        return extractedDateList;
+    });
+    const sortedArchiveList = Array.from(new Set(archiveList));
+
     return {
         props: {
             postData,
             result: result.contents,
+            archivesList: sortedArchiveList,
         },
     };
 };

@@ -9,10 +9,17 @@ import { CategoriesType } from "../../../types/Categories";
 type Props = {
     postData: PostDataType;
     result: CategoriesType[];
+    archivesList: string[];
 };
 
 export const PostPageTemplate: React.FC<Props> = (props) => {
-    const { postData, result } = props;
+    const { postData, result, archivesList } = props;
 
-    return <Presenter postData={postData} result={result} />;
+    return (
+        <Presenter
+            postData={postData}
+            result={result}
+            archivesList={archivesList}
+        />
+    );
 };

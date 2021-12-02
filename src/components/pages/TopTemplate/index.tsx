@@ -26,17 +26,17 @@ type Props = {
         ];
     };
     result: CategoriesType[];
-    totalCount: number;
+    archivesList: string[];
 };
 
 export const TopTemplate: React.FC<Props> = (props) => {
-    const { allPostsData, result, totalCount } = props;
+    const { allPostsData, result, archivesList } = props;
 
     return (
         <Presenter
             allPostsData={allPostsData}
             result={result}
-            totalCount={totalCount}
+            archivesList={archivesList}
         />
     );
 };
