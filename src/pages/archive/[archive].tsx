@@ -42,7 +42,7 @@ const post: React.FC<Props> = (props) => {
 export default post;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    // 1ヶ月毎（2021-08~)の投稿記事アーカイブのパスを取得
+    // 1ヶ月毎（2021-08~)の投稿記事アーカイブのパスを生成
     const allDateList = await client.get({
         endpoint: "posts",
         queries: { fields: `date` },
@@ -61,7 +61,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    // params.id を使用して、投稿記事ページのレンダリングに必要なデータを取得する
+    // params.archiveを使用して、各アーカイブの投稿記事ページのレンダリングに必要なデータを取得
     const archiveDate = params.archive;
     console.log(archiveDate);
 

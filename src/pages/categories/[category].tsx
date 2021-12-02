@@ -53,7 +53,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-    // params.id を使用して、投稿記事ページのレンダリングに必要なデータを取得する
+    // params.category を使用して、投稿記事ページのレンダリングに必要なデータを取得する
     const postID = params;
 
     const postData = await client.get({
