@@ -28,7 +28,7 @@
     .container_archives {
         margin: 61px auto 0;
 
-        .blog_categories {
+        .blog_archives {
             font-size: 0.5em;
             margin: 1.5em auto 1em;
             width: 85%;
@@ -37,6 +37,7 @@
         .blog_items__list {
             width: 85%;
             margin-top: 1em;
+            gap: 50px;
         }
     }
 }
