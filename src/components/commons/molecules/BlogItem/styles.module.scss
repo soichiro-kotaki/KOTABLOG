@@ -4,6 +4,7 @@
     border-radius: 5px;
     box-shadow: 12px 15px 20px rgba(0, 0, 0, 0.1);
     transition: 0.4s;
+    margin-bottom: 5em;
 
     &:hover {
         cursor: pointer;
@@ -59,5 +60,6 @@
 @media (max-width: 480px) {
     .blog_item {
         font-size: 0.4em;
+        margin-bottom: 1em;
     }
 }

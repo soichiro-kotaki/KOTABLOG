@@ -32,8 +32,8 @@ export const Presenter: React.FC<Props> = (props: Props) => {
                     <div className={styles.img_post}>
                         <Image
                             src={postData.img.url}
-                            width={900}
-                            height={450}
+                            width={1200}
+                            height={600}
                             className={styles.img}
                         />
                     </div>

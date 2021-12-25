@@ -12,7 +12,7 @@
     margin: 0 auto;
 
     .img {
-        border-radius: 10px;
+        border-radius: 10px 10px 0 0;
     }
 }
 
@@ -138,6 +138,14 @@
     .container_post {
         margin: 61px auto 0;
         flex-direction: column;
+    }
+
+    .img_post {
+        margin: 0 auto;
+
+        .img {
+            border-radius: 0 0 0 0;
+        }
     }
 
     .title_post {
