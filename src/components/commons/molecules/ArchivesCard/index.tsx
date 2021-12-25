@@ -10,7 +10,7 @@ type Props = {
     archivesList: string[];
 };
 
-export const ArchivesCard: React.FC<Props> = (props) => {
+export const ArchivesCard: React.FC<Props> = (props: Props) => {
     const { archivesList } = props;
 
     return (

@@ -7,7 +7,7 @@ type Props = {
     handleCloseMenuModal: () => void;
 };
 
-export const MenuModal: React.FC<Props> = (props) => {
+export const MenuModal: React.FC<Props> = (props: Props) => {
     const { isMenuModalVisible, handleCloseMenuModal } = props;
 
     return (

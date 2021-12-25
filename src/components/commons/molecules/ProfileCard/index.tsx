@@ -5,13 +5,13 @@ import Image from "next/image";
 import styles from "./styles.module.scss";
 
 // データ型
-import { AuthorType } from "../../../../types/Author";
+import { AuthorType } from "src/types/Author";
 
 type Props = {
     profileData: AuthorType;
 };
 
-export const ProfileCard: React.FC<Props> = (props) => {
+export const ProfileCard: React.FC<Props> = (props: Props) => {
     const { profileData } = props;
 
     return (

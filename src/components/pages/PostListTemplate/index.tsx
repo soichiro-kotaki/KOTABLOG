@@ -3,30 +3,16 @@ import React from "react";
 import { Presenter } from "./Presenter";
 
 // データ型
-import { ImageType } from "../../../types/Image";
-import { CategoriesType } from "../../../types/Categories";
+import { PostDataType } from "src/types/Post/Post";
 
 type Props = {
     allPostsData: {
-        contents: [
-            {
-                id: string;
-                createdAt: string;
-                updatedAt: string;
-                publishedAt: string;
-                revisedAt: string;
-                img: ImageType;
-                title: string;
-                date: string;
-                body: string;
-                category: CategoriesType[];
-            }
-        ];
+        contents: PostDataType[];
     };
     totalCount: number;
 };
 
-export const PostListTemplate: React.FC<Props> = (props) => {
+export const PostListTemplate: React.FC<Props> = (props: Props) => {
     const { allPostsData, totalCount } = props;
 
     return <Presenter allPostsData={allPostsData} totalCount={totalCount} />;

@@ -1,41 +1,24 @@
 import React from "react";
-import Link from "next/link";
-import Image from "next/image";
 
 // コンポーネント
-import { BaseLayout } from "../../layouts/BaseLayout";
-import { Date } from "../../commons/atoms/Date";
-import { BlogItem } from "../../commons/molecules/BlogItem";
+import { BaseLayout } from "src/components/layouts/BaseLayout";
+import { BlogItem } from "src/components/commons/molecules/BlogItem";
 
 // スタイリング
 import styles from "./styles.module.scss";
 
 // データ型
-import { ImageType } from "../../../types/Image";
-import { CategoriesType } from "../../../types/Categories";
+import { PostDataType } from "src/types/Post/Post";
 
 type Props = {
-    postData: {
-        contents: [
-            {
-                id: string;
-                createdAt: string;
-                updatedAt: string;
-                publishedAt: string;
-                revisedAt: string;
-                img: ImageType;
-                title: string;
-                date: string;
-                body: string;
-                category: CategoriesType[];
-            }
-        ];
+    postsData: {
+        contents: PostDataType[];
     };
     categoryId: string;
 };
 
-export const Presenter: React.FC<Props> = (props) => {
-    const { postData, categoryId } = props;
+export const Presenter: React.FC<Props> = (props: Props) => {
+    const { postsData, categoryId } = props;
 
     return (
         <BaseLayout title={`『${categoryId}』の記事一覧`}>
@@ -45,7 +28,9 @@ export const Presenter: React.FC<Props> = (props) => {
                     』の記事一覧
                 </h1>
                 <div className={styles.blog_items__list}>
-                    <BlogItem postData={postData} />
+                    {postsData.contents.map((content) => {
+                        return <BlogItem postData={content} key={content.id} />;
+                    })}
                 </div>
             </div>
         </BaseLayout>

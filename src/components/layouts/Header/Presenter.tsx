@@ -8,7 +8,7 @@ type Props = {
     handleOpenMenuModal: () => void;
 };
 
-export const Presenter: React.FC<Props> = (props) => {
+export const Presenter: React.FC<Props> = (props: Props) => {
     const { handleOpenMenuModal } = props;
 
     return (
@@ -42,11 +42,6 @@ export const Presenter: React.FC<Props> = (props) => {
                         <a>プロフィール</a>
                     </Link>
                 </li>
-                {/* <li className={styles.link}>
-                    <Link href="/contact">
-                        <a>お問い合わせ</a>
-                    </Link>
-                </li> */}
             </ul>
 
             <div className={styles.menubar} onClick={handleOpenMenuModal}>

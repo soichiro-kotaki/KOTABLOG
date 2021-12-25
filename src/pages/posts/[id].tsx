@@ -1,5 +1,10 @@
 import React from "react";
 
+// APi
+import { getPostDataDetail } from "src/apis/blog";
+import { getAllCategories } from "src/apis/category";
+import { getAllArchives } from "src/apis/archive";
+
 // モジュール
 import { client } from "../../lib/client";
 
@@ -17,7 +22,7 @@ type Props = {
     archivesList: string[];
 };
 
-const post: React.FC<Props> = (props) => {
+const post: React.FC<Props> = (props: Props) => {
     const { postData, result, archivesList } = props;
 
     return (
@@ -43,29 +48,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     // params.id を使用して、投稿記事ページのレンダリングに必要なデータを取得する
     const postID = params.id;
 
-    const postData = await client.get({ endpoint: `posts/${postID}` });
-
-    const result = await client.get({
-        endpoint: "categories",
-        queries: { fields: "id,name" },
-    });
-
-    const allDateList = await client.get({
-        endpoint: "posts",
-        queries: { fields: `date` },
-    });
-    const archiveList = allDateList.contents.map((content) => {
-        const extractedDateList = content.date.substr(0, 7);
-
-        return extractedDateList;
-    });
-    const sortedArchiveList = Array.from(new Set(archiveList));
+    const postData = await getPostDataDetail(postID as string);
+    const allCategoriesList = await getAllCategories();
+    const allArchivesList = await getAllArchives();
 
     return {
         props: {
             postData,
-            result: result.contents,
-            archivesList: sortedArchiveList,
+            result: allCategoriesList,
+            archivesList: allArchivesList,
         },
     };
 };

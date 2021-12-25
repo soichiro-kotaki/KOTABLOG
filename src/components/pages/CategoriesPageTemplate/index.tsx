@@ -3,31 +3,17 @@ import React from "react";
 import { Presenter } from "./Presenter";
 
 // データ型
-import { ImageType } from "../../../types/Image";
-import { CategoriesType } from "../../../types/Categories";
+import { PostDataType } from "src/types/Post/Post";
 
 type Props = {
-    postData: {
-        contents: [
-            {
-                id: string;
-                createdAt: string;
-                updatedAt: string;
-                publishedAt: string;
-                revisedAt: string;
-                img: ImageType;
-                title: string;
-                date: string;
-                body: string;
-                category: CategoriesType[];
-            }
-        ];
+    postsData: {
+        contents: PostDataType[];
     };
     categoryId: string;
 };
 
-export const CategoriesPageTemplate: React.FC<Props> = (props) => {
-    const { postData, categoryId } = props;
+export const CategoriesPageTemplate: React.FC<Props> = (props: Props) => {
+    const { postsData, categoryId } = props;
 
-    return <Presenter postData={postData} categoryId={categoryId} />;
+    return <Presenter postsData={postsData} categoryId={categoryId} />;
 };
