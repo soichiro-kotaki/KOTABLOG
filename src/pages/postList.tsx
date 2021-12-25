@@ -1,37 +1,23 @@
 import React from "react";
 
-// モジュール
-import { client } from "../lib/client";
+// API
+import { getAllPostsData } from "src/apis/blog";
 
 // コンポーネント
 import { PostListTemplate } from "../components/pages/PostListTemplate";
 
 // データ型
 import { GetStaticProps } from "next";
-import { ImageType } from "../types/Image";
-import { CategoriesType } from "../types/Categories";
+import { PostDataType } from "src/types/Post/Post";
 
 type Props = {
     allPostsData: {
-        contents: [
-            {
-                id: string;
-                createdAt: string;
-                updatedAt: string;
-                publishedAt: string;
-                revisedAt: string;
-                img: ImageType;
-                title: string;
-                date: string;
-                body: string;
-                category: CategoriesType[];
-            }
-        ];
+        contents: PostDataType[];
     };
     totalCount: number;
 };
 
-const postList: React.FC<Props> = (props) => {
+const postList: React.FC<Props> = (props: Props) => {
     const { allPostsData, totalCount } = props;
 
     return (
@@ -40,12 +26,12 @@ const postList: React.FC<Props> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-    const data = await client.get({ endpoint: "posts" });
+    const allPostsDataAndTotalCount = await getAllPostsData();
 
     return {
         props: {
-            allPostsData: data,
-            totalCount: data.totalCount,
+            allPostsData: allPostsDataAndTotalCount.allPostsdata,
+            totalCount: allPostsDataAndTotalCount.totalCount,
         },
     };
 };

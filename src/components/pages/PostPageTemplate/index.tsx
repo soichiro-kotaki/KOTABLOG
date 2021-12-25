@@ -12,7 +12,7 @@ type Props = {
     archivesList: string[];
 };
 
-export const PostPageTemplate: React.FC<Props> = (props) => {
+export const PostPageTemplate: React.FC<Props> = (props: Props) => {
     const { postData, result, archivesList } = props;
 
     return (

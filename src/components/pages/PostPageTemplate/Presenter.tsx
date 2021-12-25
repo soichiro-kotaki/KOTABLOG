@@ -3,18 +3,18 @@ import Link from "next/link";
 import Image from "next/image";
 
 // コンポーネント
-import { BaseLayout } from "../../layouts/BaseLayout";
-import { Date } from "../../commons/atoms/Date";
-import { ProfileCard } from "../../commons/molecules/ProfileCard";
-import { CategoriesCard } from "../../commons/molecules/CategoriesCard";
+import { BaseLayout } from "src/components/layouts/BaseLayout";
+import { Date } from "src/components/commons/atoms/Date";
+import { ProfileCard } from "src/components/commons/molecules/ProfileCard";
+import { CategoriesCard } from "src/components/commons/molecules/CategoriesCard";
+import { ArchivesCard } from "src/components/commons/molecules/ArchivesCard";
 
 // スタイリング
 import styles from "./styles.module.scss";
 
 // データ型
-import { PostDataType } from "../../../types/Post/Post";
-import { CategoriesType } from "../../../types/Categories";
-import { ArchivesCard } from "../../commons/molecules/ArchivesCard";
+import { PostDataType } from "src/types/Post/Post";
+import { CategoriesType } from "src/types/Categories";
 
 type Props = {
     postData: PostDataType;
@@ -22,7 +22,7 @@ type Props = {
     archivesList: string[];
 };
 
-export const Presenter: React.FC<Props> = (props) => {
+export const Presenter: React.FC<Props> = (props: Props) => {
     const { postData, result, archivesList } = props;
 
     return (

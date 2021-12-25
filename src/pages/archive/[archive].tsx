@@ -1,45 +1,33 @@
 import React from "react";
 
+// API
+import { getPostsDataByArchive } from "src/apis/blog";
+
 // モジュール
-import { client } from "../../lib/client";
+import { client } from "src/lib/client";
 
 // コンポーネント
-import { ArchivesPageTemplate } from "../../components/pages/ArchivesPageTemplate";
+import { ArchivesPageTemplate } from "src/components/pages/ArchivesPageTemplate";
 
 // データ型
 import { GetStaticPaths, GetStaticProps } from "next";
-import { ImageType } from "../../types/Image";
-import { CategoriesType } from "../../types/Categories";
+import { PostDataType } from "src/types/Post/Post";
 
 type Props = {
-    postData: {
-        contents: [
-            {
-                id: string;
-                createdAt: string;
-                updatedAt: string;
-                publishedAt: string;
-                revisedAt: string;
-                img: ImageType;
-                title: string;
-                date: string;
-                body: string;
-                category: CategoriesType[];
-            }
-        ];
+    postsData: {
+        contents: PostDataType[];
     };
     archiveDate: string;
 };
 
-const post: React.FC<Props> = (props) => {
-    const { postData, archiveDate } = props;
-    console.log(archiveDate);
+const archive: React.FC<Props> = (props: Props) => {
+    const { postsData, archiveDate } = props;
 
     return (
-        <ArchivesPageTemplate postData={postData} archiveDate={archiveDate} />
+        <ArchivesPageTemplate postsData={postsData} archiveDate={archiveDate} />
     );
 };
-export default post;
+export default archive;
 
 export const getStaticPaths: GetStaticPaths = async () => {
     // 1ヶ月毎（2021-08~)の投稿記事アーカイブのパスを生成
@@ -53,7 +41,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
         return extractedDateList;
     });
     const sortedArchiveList = Array.from(new Set(archiveList));
-    console.log(sortedArchiveList);
 
     const paths = sortedArchiveList.map((term: any) => `/archive/${term}`);
 
@@ -63,16 +50,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     // params.archiveを使用して、各アーカイブの投稿記事ページのレンダリングに必要なデータを取得
     const archiveDate = params.archive;
-    console.log(archiveDate);
 
-    const postData = await client.get({
-        endpoint: `posts`,
-        queries: { filters: `date[contains]${archiveDate}` },
-    });
+    const postsData = await getPostsDataByArchive(archiveDate as string);
 
     return {
         props: {
-            postData,
+            postsData,
             archiveDate,
         },
     };

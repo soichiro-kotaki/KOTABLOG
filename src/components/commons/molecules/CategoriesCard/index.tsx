@@ -5,13 +5,13 @@ import Link from "next/link";
 import styles from "./styles.module.scss";
 
 // データ型
-import { CategoriesType } from "../../../../types/Categories";
+import { CategoriesType } from "src/types/Categories";
 
 type Props = {
     categories: CategoriesType[];
 };
 
-export const CategoriesCard: React.FC<Props> = (props) => {
+export const CategoriesCard: React.FC<Props> = (props: Props) => {
     const { categories } = props;
 
     return (

@@ -1,10 +1,10 @@
 import React from "react";
 
 // コンポーネント
-import { MemberTemplate } from "../components/pages/MemberTemplate";
+import { ProfileTemplate } from "../components/pages/ProfileTemplate";
 
-const member: React.FC = () => {
-    return <MemberTemplate />;
+const profile: React.FC = () => {
+    return <ProfileTemplate />;
 };
 
-export default member;
+export default profile;

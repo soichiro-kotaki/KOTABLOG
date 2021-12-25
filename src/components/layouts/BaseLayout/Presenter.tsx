@@ -18,7 +18,7 @@ type Props = {
     children: React.ReactNode;
 };
 
-export const Presenter: React.FC<Props> = (props) => {
+export const Presenter: React.FC<Props> = (props: Props) => {
     const {
         title,
         handleOpenMenuModal,

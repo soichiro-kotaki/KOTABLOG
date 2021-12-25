@@ -1,7 +1,7 @@
 import React from "react";
 
 // コンポーネント
-import { BaseLayout } from "../../layouts/BaseLayout";
+import { BaseLayout } from "src/components/layouts/BaseLayout";
 
 //スタイリング
 import styles from "./styles.module.scss";

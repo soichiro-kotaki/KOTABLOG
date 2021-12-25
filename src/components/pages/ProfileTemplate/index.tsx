@@ -2,4 +2,4 @@ import React from "react";
 
 import { Presenter } from "./Presenter";
 
-export const MemberTemplate: React.FC = () => <Presenter />;
+export const ProfileTemplate: React.FC = () => <Presenter />;

@@ -3,31 +3,17 @@ import React from "react";
 import { Presenter } from "./Presenter";
 
 // データ型
-import { ImageType } from "../../../types/Image";
-import { CategoriesType } from "../../../types/Categories";
+import { PostDataType } from "src/types/Post/Post";
 
 type Props = {
-    postData: {
-        contents: [
-            {
-                id: string;
-                createdAt: string;
-                updatedAt: string;
-                publishedAt: string;
-                revisedAt: string;
-                img: ImageType;
-                title: string;
-                date: string;
-                body: string;
-                category: CategoriesType[];
-            }
-        ];
+    postsData: {
+        contents: PostDataType[];
     };
     archiveDate: string;
 };
 
-export const ArchivesPageTemplate: React.FC<Props> = (props) => {
-    const { postData, archiveDate } = props;
+export const ArchivesPageTemplate: React.FC<Props> = (props: Props) => {
+    const { postsData, archiveDate } = props;
 
-    return <Presenter postData={postData} archiveDate={archiveDate} />;
+    return <Presenter postsData={postsData} archiveDate={archiveDate} />;
 };
