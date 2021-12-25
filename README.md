@@ -25,13 +25,14 @@
 
 ## 技術構成
 
-| 技術分野       | ツール・言語名            |
-| -------------- | ------------------------- |
-| デザイン       | Figma                     |
-| フロントエンド | React(Next.js)/TypeScript |
-| バックエンド   | microCMS(HeadlessCMS)     |
-| スタイリング   | CSS modules(SCSS)         |
-| ホスティング   | Vercel                    |
+| 技術分野                | ツール・言語名            |
+| ----------------------- | ------------------------- |
+| デザイン                | Figma                     |
+| フロントエンド          | React(Next.js)/TypeScript |
+| バックエンド            | microCMS(HeadlessCMS)     |
+| スタイリング            | CSS modules(SCSS)         |
+| リンター/フォーマッター | ESlint/Prettier           |
+| ホスティング            | Vercel                    |
 
 ## 今後新たに実装する機能・修正
 
