@@ -66,6 +66,10 @@
     margin-top: 1em;
     padding: 0 0.5em;
 
+    img {
+        width: 70%;
+    }
+
     h1 {
         font-size: 1.2em;
         color: #333;
@@ -136,7 +140,7 @@
 
 @media (max-width: 480px) {
     .container_post {
-        margin: 61px auto 0;
+        margin: 60px auto 0;
         flex-direction: column;
     }
 
@@ -175,6 +179,10 @@
 
         a {
             width: 60%;
+        }
+
+        img {
+            width: 100%;
         }
     }
 

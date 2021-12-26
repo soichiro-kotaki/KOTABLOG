@@ -45,22 +45,18 @@ export const Presenter: React.FC<Props> = (props: Props) => {
                     </Link>
                 </li>
                 <li className={styles.link}>
-                    <Link href="/about">
+                    <Link href="/posts/g_z5bpo6br">
                         <span className={styles.subtitle}>
                             このブログについて
                         </span>
                     </Link>
                 </li>
                 <li className={styles.link}>
-                    <Link href="/member">
+                    <Link href="/posts/ukvqo81rgwj4">
                         <span className={styles.subtitle}>プロフィール</span>
                     </Link>
                 </li>
-                {/* <li className={styles.link}>
-                    <Link href="/contact">
-                        <span className={styles.subtitle}>Contact</span>
-                    </Link>
-                </li> */}
+
                 <p className={styles.close} onClick={handleCloseMenuModal}>
                     閉じる
                 </p>

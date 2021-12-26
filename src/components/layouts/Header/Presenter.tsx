@@ -33,12 +33,12 @@ export const Presenter: React.FC<Props> = (props: Props) => {
                     </Link>
                 </li>
                 <li className={styles.link}>
-                    <Link href="/about">
+                    <Link href="/posts/g_z5bpo6br">
                         <a>このブログについて</a>
                     </Link>
                 </li>
                 <li className={styles.link}>
-                    <Link href="/member">
+                    <Link href="/posts/ukvqo81rgwj4">
                         <a>プロフィール</a>
                     </Link>
                 </li>
