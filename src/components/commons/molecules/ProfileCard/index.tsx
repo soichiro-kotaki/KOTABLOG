@@ -4,6 +4,9 @@ import Image from "next/image";
 // スタイリング
 import styles from "./styles.module.scss";
 
+// コンポーネント
+import { AiFillGithub } from "react-icons/ai";
+
 // データ型
 import { AuthorType } from "src/types/Author";
 
@@ -32,9 +35,11 @@ export const ProfileCard: React.FC<Props> = (props: Props) => {
             <p className={styles.author_text}>{profileData.description}</p>
             <a
                 href="https://github.com/soichiro-kotaki"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={styles.author_link__github}
             >
-                GitHubはこちら
+                <AiFillGithub size={40} />
             </a>
         </div>
     );

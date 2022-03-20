@@ -34,12 +34,10 @@
     }
 
     .author_link__github {
-        font-size: 0.4em;
-        font-weight: bold;
+        margin-left: 0.5em;
 
         &:hover {
             filter: brightness(200%);
-            text-decoration: underline;
         }
     }
 }
